@@ -9,23 +9,22 @@ y2 = x**6 -6*x**5 +15*x**4 -20*x**3 +15*x**2 -6*x +1 #Binomische Formel
 y3 = x*(x*(x*(x*((x-6)*x +15) -20) +15) -6) +1 #Horner Schema
 
 #Aufgabe 1 a
-plt.subplot(5, 1, 1)
+ax1 = plt.subplot(311)
 plt.plot(x, y1, linewidth=0.5)
-plt.xlabel(r'x')
+plt.setp(ax1.get_xticklabels(), visible=False)
 plt.ylabel(r'f(x)')
 
 #Aufgabe 1 b
-plt.subplot(5, 1, 3)
+ax2 = plt.subplot(312, sharex=ax1)
 plt.plot(x, y2, linewidth=0.5)
-plt.xlabel(r'x')
+plt.setp(ax2.get_xticklabels(), visible=False)
 plt.ylabel(r'g(x)')
 
 #Aufgabe 1 c
-plt.subplot(5, 1, 5)
+ax3 = plt.subplot(313, sharex=ax1)
 plt.plot(x, y3, linewidth=0.5)
 plt.xlabel(r'x')
 plt.ylabel(r'h(x)')
-
 plt.savefig('build/Aufgabe1.pdf')
 plt.close()
 
@@ -103,6 +102,28 @@ plt.legend(loc='best')
 plt.savefig('build/Aufgabe3.pdf')
 plt.close()
 
+print('----------------------------------------------------')
+print('Aufgabe 4:')
+
+EE = 50*(10**9)
+ME = 511*(10**3)
+gamma = EE/ME
+beta = np.float16(np.sqrt(1 - gamma**(-2)))
+print(type(beta))
+def wqs(x):
+    return (2+np.sin(x)**2)/(1- beta *(np.cos(x)**2))
+def mwqs(x):
+    return (2+np.sin(x)**2)/((ME/EE)**2*(np.cos(x)**2)+(np.sin(x)**2))
+x = np.linspace(-1/4*np.pi, 9/4*np.pi, 1000)
+plt.plot(x, wqs(x))
+plt.plot(x, mwqs(x))
+plt.yscale('log')
+plt.xlim(-1/4*np.pi, 9/4*np.pi)
+plt.xticks([-1/4*np.pi, 0 , np.pi/2, np.pi, 3/2*np.pi, 2*np.pi, 9/4*np.pi],[r'$\frac{\pi}{4}$',0, r'$\frac{\pi}{2}$', r'$\pi$', r'$\frac{3 \pi}{2}$', r'2 $\pi$', r'$\frac{9 \pi}{4}$'])
+plt.savefig('build/Aufgabe4.pdf')
+plt.close()
+
+print(type(wqs(np.pi)))
 
 
 
@@ -117,5 +138,3 @@ plt.close()
 
 
 
-
-#
