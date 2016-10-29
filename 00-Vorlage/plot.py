@@ -107,7 +107,7 @@ print('Aufgabe 4:')
 
 EE = 50*(10**9)
 ME = 511*(10**3)
-gamma = EE/ME
+gamma = np.float16(EE/ME)
 beta = np.float16(np.sqrt(1 - gamma**(-2)))
 print(type(beta))
 def wqs(x):
@@ -123,7 +123,7 @@ plt.xticks([-1/4*np.pi, 0 , np.pi/2, np.pi, 3/2*np.pi, 2*np.pi, 9/4*np.pi],[r'$\
 plt.savefig('build/Aufgabe4.pdf')
 plt.close()
 
-print(type(wqs(np.pi)))
+print(wqs(np.pi))
 
 
 
