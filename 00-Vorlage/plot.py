@@ -114,27 +114,35 @@ def wqs(x):
     return (2+np.sin(x)**2)/(1- beta *(np.cos(x)**2))
 def mwqs(x):
     return (2+np.sin(x)**2)/((ME/EE)**2*(np.cos(x)**2)+(np.sin(x)**2))
-x = np.linspace(-1/4*np.pi, 9/4*np.pi, 1000)
+x = np.linspace(-np.pi/1000, np.pi/1000, 3000)
+ax4 = plt.subplot(211)
 plt.plot(x, wqs(x))
-plt.plot(x, mwqs(x))
+plt.title('Numerisch Instabil')
+plt.setp(ax4.get_xticklabels(), visible=False)
 plt.yscale('log')
-plt.xlim(-1/4*np.pi, 9/4*np.pi)
-plt.xticks([-1/4*np.pi, 0 , np.pi/2, np.pi, 3/2*np.pi, 2*np.pi, 9/4*np.pi],[r'$\frac{\pi}{4}$',0, r'$\frac{\pi}{2}$', r'$\pi$', r'$\frac{3 \pi}{2}$', r'2 $\pi$', r'$\frac{9 \pi}{4}$'])
+plt.xlim(-np.pi/1000, np.pi/1000)
+plt.xticks([-np.pi/1000 , 0 , np.pi/1000],[r'$\frac{\pi}{1000}$', 0, r'$\frac{\pi}{1000}$'])
+plt.subplot(212, sharex = ax4)
+plt.plot(x, mwqs(x))
+plt.title('Numerisch Stabil')
+plt.yscale('log')
+plt.xlim(-np.pi/1000 , np.pi/1000)
 plt.savefig('build/Aufgabe4.pdf')
 plt.close()
 
-print(wqs(np.pi))
+print('Aufgabe 4d:')
 
+def sKondi(x):
+    return x*((2*np.sin(x)*np.cos(x))/(1-(beta*np.cos(x))**2)-((2+np.sin(x)**2)*2*(beta**2)*np.sin(x)*np.cos(x)/(1-(beta*np.cos(x))**2)**(2)))/wqs(x)
+def gKondi(x):
+    return x*((2*np.sin(x)*np.cos(x))/(np.sin(x)**2+((gamma**(-2))*(np.cos(x)**2)))+(2+np.sin(x)**2)*((2*(gamma**(-2))-2)*np.sin(x)*np.cos(x))/((np.sin(x)**2+((gamma**(-2))*(np.cos(x)**2)))))/mwqs(x)
 
+print(gKondi(1))
+x = np.linspace(-0.1, np.pi+0.1, 100)
+plt.plot(x, sKondi(x),'r.-', alpha =0.5, label='numerisch instabil')
+plt.plot(x, gKondi(x),'b-.', alpha=0.5, label='numerisch stabil')
+plt.xlim(0, np.pi)
+plt.legend(loc='best')
+plt.savefig('build/Aufgabe 4e.pdf')
 
-
-
-
-
-
-
-
-
-
-
-
+print('Kondi bei x=0', sKondi(0))

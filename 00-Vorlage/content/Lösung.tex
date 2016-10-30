@@ -74,28 +74,24 @@ In einem Intervall von $10^{-6} \le$ x $\le 10^{100}$ weicht f(x) um weniger als
 	\centering
 	\includegraphics{build/Aufgabe3.pdf}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%
+\section{Aufgabe 4}
+\subsection{a) Numerische Stabilität des Differentiellen Wirkungsquerschnitts}
+Die Gleichung $\frac{d\Rho}{d\Omega}$ ist numerisch instabil sobald im Nenner eine zu kleine Zahl steht. Strebt die Funktion 
+\begin{equation}
+  \lim\limits_{\theta \to n\pi} \frac{\alpha^2}{s} \left( \frac{2+\sin^2{\theta}}{1-(1-(m_\text{e}/E_\text{e})^2) \cos^2(\theta)} \right)
+  \label{eqn:wirk}
+\end{equation}
+gegen ein ganzzahliges vielfache von $\pi$ wird $\cos(\theta)^2$ =  1 und der Nenner strebt gegen den Wert $\frac{m_\text{e}^2}{E_\text{e}^2}$ welcher in der Größenordnung $10^{-10}$. Aufgrund der Division durch eine kleine Zahl ist der Term an den vielfachen von $\pi$ schlecht konditioniert und daher auch numerisch Instabil.
+\subsection{b) Stabilisierung des Numerischen Problems}
+Mit Hilfe des Hinweise lässt sich der Numerische Ausdruck zu 
+\begin{eqnarray}
+  1 -\beta^2 \cos(\theta)^2 =& \sin(\theta)^2 + \cos(\theta)^2 -\beta^2 \cos(\theta)^2 \\
+  \sin(\theta)^2 + (1 - \beta^2) \cos(\theta)^2 =& sin(\theta)^2 + \frac{1}{\gamma^2} \cos(\theta)^2 \\
+ =& sin^2(\theta) + \left( \frac{m_\text{e}}{E_\text{e}} \right)^2 \cos^2(\theta)
+  \label{<++>}
+\end{eqnarray}
+umformen. Daraus ergibt sich ein stabilisierte Term von 
+\begin{equation}
+  \frac{2 - \sin(\theta)^2}{\sin(\theta)^2 + (\frac{m_\text{e}}{E_\text{e}})^2 \cos(\theta)^2} \ .
+  \label{}
+\end{equation}
