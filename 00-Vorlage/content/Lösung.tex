@@ -74,24 +74,64 @@ In einem Intervall von $10^{-6} \le$ x $\le 10^{100}$ weicht f(x) um weniger als
 	\centering
 	\includegraphics{build/Aufgabe3.pdf}
 \end{figure}
-\section{Aufgabe 4}
-\subsection{a) Numerische Stabilität des Differentiellen Wirkungsquerschnitts}
+\section*{Aufgabe 4}
+\subsection*{a) Numerische Stabilität des Differentiellen Wirkungsquerschnitts}
 Die Gleichung $\frac{d\Rho}{d\Omega}$ ist numerisch instabil sobald im Nenner eine zu kleine Zahl steht. Strebt die Funktion 
 \begin{equation}
   \lim\limits_{\theta \to n\pi} \frac{\alpha^2}{s} \left( \frac{2+\sin^2{\theta}}{1-(1-(m_\text{e}/E_\text{e})^2) \cos^2(\theta)} \right)
   \label{eqn:wirk}
 \end{equation}
 gegen ein ganzzahliges vielfache von $\pi$ wird $\cos(\theta)^2$ =  1 und der Nenner strebt gegen den Wert $\frac{m_\text{e}^2}{E_\text{e}^2}$ welcher in der Größenordnung $10^{-10}$. Aufgrund der Division durch eine kleine Zahl ist der Term an den vielfachen von $\pi$ schlecht konditioniert und daher auch numerisch Instabil.
-\subsection{b) Stabilisierung des Numerischen Problems}
+\subsection*{b) Stabilisierung des Numerischen Problems}
 Mit Hilfe des Hinweise lässt sich der Numerische Ausdruck zu 
 \begin{eqnarray}
   1 -\beta^2 \cos(\theta)^2 =& \sin(\theta)^2 + \cos(\theta)^2 -\beta^2 \cos(\theta)^2 \\
   \sin(\theta)^2 + (1 - \beta^2) \cos(\theta)^2 =& sin(\theta)^2 + \frac{1}{\gamma^2} \cos(\theta)^2 \\
  =& sin^2(\theta) + \left( \frac{m_\text{e}}{E_\text{e}} \right)^2 \cos^2(\theta)
-  \label{<++>}
+  \label{}
 \end{eqnarray}
 umformen. Daraus ergibt sich ein stabilisierte Term von 
 \begin{equation}
-  \frac{2 - \sin(\theta)^2}{\sin(\theta)^2 + (\frac{m_\text{e}}{E_\text{e}})^2 \cos(\theta)^2} \ .
+  \frac{2 + \sin(\theta)^2}{\sin(\theta)^2 + (\frac{m_\text{e}}{E_\text{e}})^2 \cos(\theta)^2} \ .
   \label{}
 \end{equation}
+\subsection*{c)}
+\begin{figure}
+  \centering
+  \includegraphics[height=6cm]{build/Aufgabe4.pdf}
+  \caption{Vergleich der beiden Graphen}
+  \label{fig:Vergleich der beiden Graphen}
+\end{figure}
+\subsection*{d) Konditionszahl}
+Die Konditionszahl ist definiert als 
+\begin{equation}
+  \kappa(x) = \left| x\frac{f'(x)}{f(x)} \right|
+  \label{}
+\end{equation}
+für den nicht stabelisierten Term ergibt sich 
+\begin{eqnarray}
+  \frac{df(\theta)}{d\theta} = \frac{\alpha^2}{s} \left( \frac{2\sin(\theta)\cos(\theta)}{1 - \beta^2 \cos(\theta)^2} - \frac{(2+\sin(\theta)^2)2\beta^2\sin(\theta)\cos(\theta)}{(1-\beta^2\cos(\theta)^2)^2} \right)
+  \label{}
+\end{eqnarray}
+Kappa berechnet sich somit zu 
+\begin{equation}
+  \kappa(\theta) = \left| \theta \left( \frac{df(\theta)}{d\theta} \right) \left( \frac{d\sigma}{d\Omega} \right) \right| = \left| \theta \left( \frac{2\sin(\theta)\cos(\theta)}{2 + \sin(\theta)^2} - \frac{2\beta^2\sin(\theta)\cos(\theta)}{1 - \beta^2 \cos(\theta)^2} \right) \right|
+  \label{}
+\end{equation}
+Für den stabelisierten Term lautet die Ableitung
+\begin{equation}
+  \frac{df(\theta)}{d\theta} = \frac{\alpha^2}{s}\left( \frac{2\sin(\theta)\cos(\theta)}{sin(\theta)^2+\gamma^{-2}\cos(\theta)^2} + \frac{(2+\sin(\theta)^2)(2\gamma^{-2}\sin{\theta}\cos{\theta}-2\sin(\theta)\cos(\theta))}{(\sin(\theta)^2 + \gamma^{-2}\cos(\theta)^2)} \right)
+  \label{<++>}
+\end{equation}
+Es ergibt sich ein Kappa von 
+\begin{eqnarray}
+  \kappa(\theta) =& \left| \theta \left( \frac{2\sin(\theta)\cos(\theta)}{2 + \sin(\theta)^2} + \frac{2\gamma^{-2}\sin(\theta)\cos(\theta) - 2\sin(\theta)\cos(\theta)}{\sin(\theta)^2 + \gamma^{-2}\cos(\theta)^2}  \right) \right| \\
+  =& \left| \theta \left( \frac{2\sin(\theta)\cos(\theta)}{2 + \sin(\theta)^2} - \frac{2\beta^2\sin(\theta)\cos(\theta)}{\sin(\theta)^2 + \gamma^2 \cos(\theta)^2} \right) \right|
+\end{eqnarray}.
+\subsection*{e)}
+\begin{figure}
+  \centering
+  \includegraphics{build/Aufgabe4e.pdf}
+  \caption{Verlauf der Konditionszahl}
+  \label{fig:<+label+>}
+\end{figure}
