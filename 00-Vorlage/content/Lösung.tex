@@ -87,12 +87,17 @@ Mit Hilfe des Hinweise lässt sich der Numerische Ausdruck zu
 \begin{eqnarray}
   1 -\beta^2 \cos(\theta)^2 =& \sin(\theta)^2 + \cos(\theta)^2 -\beta^2 \cos(\theta)^2 \\
   \sin(\theta)^2 + (1 - \beta^2) \cos(\theta)^2 =& sin(\theta)^2 + \frac{1}{\gamma^2} \cos(\theta)^2 \\
- =& sin^2(\theta) + \left( \frac{m_\text{e}}{E_\text{e}} \right)^2 \cos^2(\theta)
+ =& sin^2(\theta) + \left( \frac{m_\text{e}}{E_\text{e}} \right)^2 \cos^2(\theta) \\
   \label{}
 \end{eqnarray}
+und
+\begin{equation}
+  2+\sin(\theta)^2 = 3 - \cos(\theta)^2
+  \label{<++>}
+\end{equation}
 umformen. Daraus ergibt sich ein stabilisierte Term von 
 \begin{equation}
-  \frac{2 + \sin(\theta)^2}{\sin(\theta)^2 + (\frac{m_\text{e}}{E_\text{e}})^2 \cos(\theta)^2} \ .
+  \frac{3 - \cos(\theta)^2}{\sin(\theta)^2 + (\frac{m_\text{e}}{E_\text{e}})^2 \cos(\theta)^2} \ .
   \label{}
 \end{equation}
 \subsection*{c)}
@@ -120,13 +125,13 @@ Kappa berechnet sich somit zu
 \end{equation}
 Für den stabelisierten Term lautet die Ableitung
 \begin{equation}
-  \frac{df(\theta)}{d\theta} = \frac{\alpha^2}{s}\left( \frac{2\sin(\theta)\cos(\theta)}{sin(\theta)^2+\gamma^{-2}\cos(\theta)^2} + \frac{(2+\sin(\theta)^2)(2\gamma^{-2}\sin{\theta}\cos{\theta}-2\sin(\theta)\cos(\theta))}{(\sin(\theta)^2 + \gamma^{-2}\cos(\theta)^2)} \right)
+  \frac{df(\theta)}{d\theta} = \frac{\alpha^2}{s}\left( \frac{2\sin(\theta)\cos(\theta)}{sin(\theta)^2+\gamma^{-2}\cos(\theta)^2} + \frac{(3-\cos(\theta)^2)(2\gamma^{-2}\sin{\theta}\cos{\theta}-2\sin(\theta)\cos(\theta))}{(\sin(\theta)^2 + \gamma^{-2}\cos(\theta)^2)} \right)
   \label{<++>}
 \end{equation}
 Es ergibt sich ein Kappa von 
 \begin{eqnarray}
-  \kappa(\theta) =& \left| \theta \left( \frac{2\sin(\theta)\cos(\theta)}{2 + \sin(\theta)^2} + \frac{2\gamma^{-2}\sin(\theta)\cos(\theta) - 2\sin(\theta)\cos(\theta)}{\sin(\theta)^2 + \gamma^{-2}\cos(\theta)^2}  \right) \right| \\
-  =& \left| \theta \left( \frac{2\sin(\theta)\cos(\theta)}{2 + \sin(\theta)^2} - \frac{2\beta^2\sin(\theta)\cos(\theta)}{\sin(\theta)^2 + \gamma^2 \cos(\theta)^2} \right) \right|
+  \kappa(\theta) =& \left| \theta \left( \frac{2\sin(\theta)\cos(\theta)}{3 - \cis(\theta)^2} + \frac{2\gamma^{-2}\sin(\theta)\cos(\theta) - 2\sin(\theta)\cos(\theta)}{\sin(\theta)^2 + \gamma^{-2}\cos(\theta)^2}  \right) \right| \\
+  =& \left| \theta \left( \frac{2\sin(\theta)\cos(\theta)}{3 - \cos(\theta)^2} - \frac{2\beta^2\sin(\theta)\cos(\theta)}{\sin(\theta)^2 + \gamma^2 \cos(\theta)^2} \right) \right|
 \end{eqnarray}.
 \subsection*{e)}
 \begin{figure}

@@ -110,10 +110,12 @@ ME = 511*(10**3)
 gamma = np.float16(EE/ME)
 beta = np.float16(np.sqrt(1 - gamma**(-2)))
 print(type(beta))
+#numerisch instabiler Wirkungsquerschnitt
 def wqs(x):
     return (2+np.sin(x)**2)/(1- beta *(np.cos(x)**2))
+#modifizierte Wirkungsquerschnitt
 def mwqs(x):
-    return (2+np.sin(x)**2)/((ME/EE)**2*(np.cos(x)**2)+(np.sin(x)**2))
+    return (3-np.cos(x)**2)/((ME/EE)**2*(np.cos(x)**2)+(np.sin(x)**2))
 x = np.linspace(-1*10**(-6)+np.pi, np.pi+1*10**(-6), 3000)
 ax4 = plt.subplot(211)
 plt.plot(x, wqs(x))
@@ -135,7 +137,7 @@ print('Aufgabe 4d:')
 def sKondi(x):
     return x*((2*np.sin(x)*np.cos(x))/(1-(beta*np.cos(x))**2)-((2+np.sin(x)**2)*2*(beta**2)*np.sin(x)*np.cos(x)/(1-(beta*np.cos(x))**2)**(2)))/wqs(x)
 def gKondi(x):
-    return x*((2*np.sin(x)*np.cos(x))/(np.sin(x)**2+((gamma**(-2))*(np.cos(x)**2)))+(2+np.sin(x)**2)*((2*(gamma**(-2))-2)*np.sin(x)*np.cos(x))/((np.sin(x)**2+((gamma**(-2))*(np.cos(x)**2)))))/mwqs(x)
+    return x*((2*np.sin(x)*np.cos(x))/(np.sin(x)**2+((gamma**(-2))*(np.cos(x)**2)))+(3-np.cos(x)**2)*((2*(gamma**(-2))-2)*np.sin(x)*np.cos(x))/((np.sin(x)**2+((gamma**(-2))*(np.cos(x)**2)))))/mwqs(x)
 
 print(gKondi(1))
 x = np.linspace(-0.1, np.pi+0.1, 100)
