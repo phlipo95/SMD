@@ -1,25 +1,26 @@
 def aufg4():
-    from mpl_toolkits.mplot3d import Axes3D
-    from matplotlib import cm
-    from matplotlib.ticker import LinearLocator, FormatStrFormatter
     import matplotlib.pyplot as plt
     import numpy as np
+    from numpy.linalg import inv, det
 
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    X = np.arange(-5, 5, 0.25)
-    Y = np.arange(-5, 5, 0.25)
-    X, Y = np.meshgrid(X, Y)
-    R = np.sqrt(X**2 + Y**2)
-    Z = np.sin(R)
-    surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-    ax.set_zlim(-1.01, 1.01)
+    X = np.linspace(2, 6, 200)
+    Y = np.linspace(0, 4, 200)
+    x, y = np.meshgrid(X, Y) 
+    #Startwerte
+    myx = 4; myy = 2; sigmax = 3.5; sigmay = 1.5 
+    
+    #2dim Gaußfunktion
+    def phi(x1,x2):
+        return 1/(2*np.pi*sigmax*sigmay)*np.e**(-1/(2*sigmax)*(x1-myx)**2)*np.e**(-1/(2*sigmay)*(x2-myy)**2)
 
-    ax.zaxis.set_major_locator(LinearLocator(10))
-    ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+    #Maximalwert der Gaußfunktion 
+    ephi = phi(4,2)/np.sqrt(np.e)
+    print('1/sqrt(e) der maximalen Stelle der Gaußfunktion:', ephi)
 
-    fig.colorbar(surf, shrink=0.5, aspect=5)
-
+    plt.figure() 
+    plt.pcolormesh(x, y, phi(x,y))
+    plt.colorbar()
+    plt.gca().set_aspect("equal")
     plt.show()
 if __name__ == '__main__':
     aufg4()
