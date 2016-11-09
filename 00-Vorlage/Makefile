@@ -9,6 +9,7 @@ else
 endif
 
 all: build/main.pdf
+p: build/plot.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
