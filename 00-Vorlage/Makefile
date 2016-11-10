@@ -9,14 +9,29 @@ else
 endif
 
 all: build/main.pdf
-p: build/plot.pdf
+p1: aufg1.py
+p2: aufg2.py
+p3: aufg3.py
+p4: aufg4.py
+p: AlleAufgaben
 
 # hier Python-Skripte:
-build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
+AlleAufgaben:
+	TEXINPUTS="$(call translate,$(pwd):)" make p1 p2 p3 p4
+
+aufg1.py: Python/aufg1.py matplotlibrc header-matplotlib.tex
+	TEXINPUTS="$(call translate,$(pwd):)" python Python/aufg1.py
+
+aufg2.py: Python/aufg2.py matplotlibrc header-matplotlib.tex
+	TEXINPUTS="$(call translate,$(pwd):)" python Python/aufg2.py
+
+aufg3.py: Python/aufg3.py matplotlibrc header-matplotlib.tex
+	TEXINPUTS="$(call translate,$(pwd):)" python Python/aufg3.py
+
+aufg4.py: Python/aufg4.py matplotlibrc header-matplotlib.tex
+	TEXINPUTS="$(call translate,$(pwd):)" python Python/aufg4.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS="$(call translate,build:)" \

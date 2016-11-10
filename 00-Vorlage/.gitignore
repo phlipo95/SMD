@@ -1,1 +1,6 @@
 /build
+header.tex
+header-matplotlib.tex
+main.tex
+Makefile
+matplotlibrc
