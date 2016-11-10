@@ -20,7 +20,7 @@ Die kleinste positive Zahl, die sich mit 32 Bit (Single) darstellen lässt, kann
 bestimmt werden. Dafür muss $E = 0$ und $M = 1$ gewählt werden und es kommt $Z = 5.87747245476067 \cdot 10^{-39}$ raus. Diese Zahl entspricht auch der Wahrscheinlichkeit, dass der PC den exakten Wert $\frac{1}{2}$ findet.
 
 \subsection*{Aufgabe 1d}
-Die Wahrscheinlichkeit den exakten Wert von $\frac{2}{3}$ zu finden ist gleich null, weil es unendlich viele Stellen gibt. Allerdings wird $\frac{2}{3}$ im PC zu 0.6666666666666666 gerundet und dieser Wert kann mit der gleichen Wahrscheinlichkeit wie $\frac{1}{2}$ bestimmt werden.
+Die Wahrscheinlichkeit den exakten Wert von $\frac{2}{3}$ zu finden ist gleich null, weil $\frac{2}{3}$ unendlich viele Stellen hat. Allerdings wird $\frac{2}{3}$ im PC zu 0.6666666666666666 gerundet und dieser Wert kann mit der gleichen Wahrscheinlichkeit wie $\frac{1}{2}$ bestimmt werden.
 
 \section*{Aufgabe 2}
 \subsection*{Aufgabe 2b}
@@ -41,11 +41,12 @@ Der Zufallszahlengenerator hängt nicht bzw. nur vernachlässigbar vom Startwert
   \label{fig:2c2}
 \end{figure}
 
-Für einen guten Zufallsgenerator müssen im 2-dim Geraden und im 3-dim Ebenen mit gleicher Steigung und gleichm Abstand zueinander gegeben sein. \\
-In Abbildung \ref{fig:2c1} sind deutlich Geraden mit gleichem Abstand und gleicher Steigung zu erkennen. \\ In Abbildung \ref{fig:2c2} kann man Ebenen erkennen, allerdings kann man nicht sagen ob diese parallel sind oder nicht.
+Für einen guten Zufallsgenerator müssen im 2-dim Geraden und im 3-dim Ebenen mit gleicher Steigung und gleichem Abstand zueinander gegeben sein. \\
+In Abbildung \ref{fig:2c1} sind deutlich Geraden mit gleichem Abstand und gleicher Steigung zu erkennen. \\ In Abbildung \ref{fig:2c2} kann man Ebenen erkennen, allerdings kann man nicht sagen ob diese parallel sind oder nicht. \\
+Dennoch kann gesagt werden, dass es sich um einen guten Zufallsgenerator handelt.
 
 \subsection*{Aufgabe 2d}
-In der ROOT-Dokumentation zu TRandom.Rndm() steht, dass die Funktion ein Linear-kongruenter Zufallszahlengenerator ist, welche gleichverteilte Zufallszahlen zwischen 0 und 1 ausgibt. Diese haben eine Periodizität von $2^{31}$. \\
+In der ROOT-Dokumentation zu TRandom.Rndm() steht, dass die Funktion ein Linear-kongruenter Zufallszahlengenerator ist, welcher gleichverteilte Zufallszahlen zwischen 0 und 1 ausgibt. Diese haben eine Periodizität von $2^{31}$. \\
 Der von uns programmierte Zufallszahlengenerator gibt ebenfalls gleichverteilte Zufallszahlen aus, allerdings mit einer Periodizität von nur $625$.
 
 \subsection*{Aufgabe 2e}
