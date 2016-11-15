@@ -1,4 +1,4 @@
-def aufg():
+def aufg2():
 
     import ROOT
     import numpy as np
@@ -75,4 +75,4 @@ def aufg():
     plt.close()
 
 if __name__ == '__main__':
-	aufg()
+	aufg2()

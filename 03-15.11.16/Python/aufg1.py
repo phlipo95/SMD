@@ -1,4 +1,4 @@
-def aufg():
+def aufg1():
 
 	#Aufgabe 1c
 	def Z(E, M):
@@ -15,4 +15,4 @@ def aufg():
 	print(b*z)
 
 if __name__ == '__main__':
-	aufg()
+	aufg1()
