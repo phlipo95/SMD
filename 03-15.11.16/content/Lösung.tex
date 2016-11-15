@@ -62,3 +62,25 @@ Der von uns programmierte Zufallszahlengenerator gibt ebenfalls gleichverteilte 
 
 \subsection*{Aufgabe 2f}
 Die Funktion gibt bei einem Startwert von 5000 nach der Normierung 16-mal $\frac{1}{2}$ aus. Man kann mit jedem der 625 Werte die bei einem Startwert von 5000 auftauchen $\frac{1}{2}$ 16-mal erreichen. Daraus folgt, dass die Anzahl vom Startwert abhängt, denn wenn man keinen der 625 Werte nimmt, kann $\frac{1}{2}$ nicht erreicht werden.
+
+\section*{Aufgabe 4}
+\subsection*{Aufgabe 4a}
+\begin{align*}
+  f(x) = a_0 + a_1 \cdot x \\
+  a_0 = \num{1.0 +- 0.2} \\
+  a_1 = \num{1.0 +- 0.2} \\
+  \rho = 0.8 \\
+  \text{cov}(a_0, a_1) = \rho\,\sigma_{a_0}\,\sigma_{a_1} = 20
+\end{align*}
+
+unkorrelierte Fehlerfortpflanzung:
+\begin{align*}
+  \sigma_y &= \sqrt{\left(\frac{\partial f(x)}{\partial a_0}\ \sigma_{a_0} \right)^2 + \left(\frac{\partial f(x)}{\partial a_1}\ \sigma_{a_1} \right)^2} \\
+  &= \sqrt{\sigma_{a_0}^2 + (x\,\sigma_{a_1})^2} = \sqrt{0.04\,x^2 + 0.04}
+\end{align*}
+
+korrelierte Fehlerfortpflanzung:
+\begin{align*}
+  \sigma_y &= \sqrt{\left(\frac{\partial f(x)}{\partial a_0} \sigma_{a_0} \right)^2 + \left(\frac{\partial f(x)}{\partial a_1} \sigma_{a_1} \right)^2 + 2\, \text{cov}(a_0, a_1) \left(\frac{\partial f(x)}{\partial a_0}\right) \left(\frac{\partial f(x)}{\partial a_1}\right)} \\
+  &= \sqrt{\sigma_{a_1}^2\,x^2 + 1.6\,x + \sigma_{a_0}^2} = \sqrt{0.04\,x^2 + 40\,x + 0.04}
+\end{align*}

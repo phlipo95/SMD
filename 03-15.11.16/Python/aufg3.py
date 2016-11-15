@@ -15,7 +15,7 @@ def gV(x,xMin, xMax):
     return fx
 gv=gV(xn,0,100)
 plt.hist(gv, 50, normed=1)
-plt.savefig('aufg3a.pdf') 
+plt.savefig('aufg3a.pdf')
 plt.close()
 
 #Exponentialverteilung
@@ -28,7 +28,7 @@ def expo(x,t,n):
 
 Expo=expo(xn,1,1)
 plt.hist(Expo, 50, normed=1)
-plt.savefig('aufg3b.pdf') 
+plt.savefig('aufg3b.pdf')
 plt.close()
 
 #Exponentialverteilung
@@ -43,7 +43,7 @@ def pot(x,xMin,n,N):
 
 Pot=pot(xn,1,3,1)
 plt.hist(Pot, bins=np.linspace(0,3,50),normed=1)
-plt.savefig('aufg3c.pdf') 
+plt.savefig('aufg3c.pdf')
 plt.close()
 
 #Cauchyverteilung
@@ -57,11 +57,11 @@ def cau(x):
 Cau=cau(xn)
 plt.hist(Cau, bins=np.linspace(-20,20,50), normed=1)
 plt.xlim(0,100)
-plt.savefig('aufg3d.pdf') 
+plt.savefig('aufg3d.pdf')
 plt.close()
 
 
-    
+
 #data = np.load("empirisches_histogramm.npy")
 #plt.hist(data['bin_mid'], bins=np.linspace(0., 1., 50), weights=data['hist'])
 #plt.show()
