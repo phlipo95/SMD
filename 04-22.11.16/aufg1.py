@@ -12,9 +12,8 @@ def trafo(x):
 
 # erzeugt Gleichverteilte Zufallszahlen
 GvZz = np.array([])
-for i in range(int(1e2)):
+for i in range(int(1e5)):
     GvZz = np.append(trafo(rnd.random()), GvZz)
-print(len(GvZz))
 rec = np.array(GvZz, dtype=[("Energie", np.float)])
 array2root(rec, "NeutrinoMC.root", treename="Signal_MC", mode="RECREATE")
 
@@ -27,32 +26,17 @@ akzeptiert=np.array([])
 
 #meine Variante
 GvZz2 = rnd.random(size=len(Energie['Energie']))
-mask = detect(np.array(Energie['Energie'])) >= GvZz2
-failed = np.sum(~mask)
-while failed > 0:
-    GvZz2[~mask] = rnd.random(size=failed)
-    mask = detect(np.array(Energie['Energie'])) >= GvZz2
-    failed = np.sum(~mask)
-print(GvZz2)
-accept=np.array(GvZz2,dtype=[("Energie",np.float)])
-
-#Alex varainte
-'''
-for i in Energie['Energie']:
-    if(detect(np.float(i))>=rnd.random()):
-        akzeptiert=np.append(akzeptiert,i)
-accept=np.array(akzeptiert,dtype=[("Energie",np.float)])
-'''
+mask = detect(np.array(Energie['Energie'])) >= GvZz2 
+accept = np.array(Energie['Energie'][~mask],dtype=[("Energie",np.float)])
 
 array2root(accept, "NeutrinoMC.root", treename="Signal_MC_Akzeptanz")
 
-plt.hist(Energie['Energie'], bins=100, alpha=0.3, color="yellow", label="Aufgabenteil a)")
-plt.hist(accept['Energie'], bins=100, alpha=0.3, color="red", label="Aufgabenteil b)")
+plt.hist(Energie['Energie'], bins=np.linspace(0,10,100), alpha=0.3, color="yellow", label="Aufgabenteil a)")
+plt.hist(accept['Energie'], bins=np.linspace(0,10,100), alpha=0.3, color="red", label="Aufgabenteil b)")
 plt.xlabel("Energie der Neutrinos / TeV")
 plt.ylabel("Anzahl")
 plt.xscale("log")
 plt.yscale("log")
-plt.xticks((1, 10, 100, 1000), ("1", "10", "100", "1000"))
 plt.legend(loc="best")
 plt.legend(loc="best")
 plt.show()
