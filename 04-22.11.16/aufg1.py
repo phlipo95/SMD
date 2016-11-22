@@ -24,7 +24,6 @@ def detect(E):
 Energie = root2array("NeutrinoMC.root", "Signal_MC")
 akzeptiert=np.array([])
 
-#meine Variante
 GvZz2 = rnd.random(size=len(Energie['Energie']))
 mask = detect(np.array(Energie['Energie'])) >= GvZz2 
 accept = np.array(Energie['Energie'][~mask],dtype=[("Energie",np.float)])
