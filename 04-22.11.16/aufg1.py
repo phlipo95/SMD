@@ -1,10 +1,10 @@
 import numpy as np
 import numpy.random as rnd
 import ROOT
-from root_numpy import array2root, root2array 
+from root_numpy import array2root, root2array
 from matplotlib import pyplot as plt
 
-# Aufgabenteil A) 
+# Aufgabenteil A)
 
 p0 = 1
 def trafo(x):
@@ -27,11 +27,11 @@ akzeptiert=np.array([])
 
 #meine Variante
 GvZz2 = rnd.random(size=len(Energie['Energie']))
-mask = detect(np.array(Energie['Energie'])) >= GvZz2 
+mask = detect(np.array(Energie['Energie'])) >= GvZz2
 failed = np.sum(~mask)
 while failed > 0:
     GvZz2[~mask] = rnd.random(size=failed)
-    mask = detect(np.array(Energie['Energie'])) >= GvZz2 
+    mask = detect(np.array(Energie['Energie'])) >= GvZz2
     failed = np.sum(~mask)
 print(GvZz2)
 accept=np.array(GvZz2,dtype=[("Energie",np.float)])
@@ -88,14 +88,16 @@ treffer=np.array(hits,dtype=[("Hits",np.float)])
 array2root(treffer, "NeutrinoMC.root", treename="AnzahlHits")
 
 # d) Ortsmessung
+Hits = root2array("build/NeutrinoMC.root", "AnzahlHits")
+
 x = np.array([])
 y = np.array([])
-for i in hits:
+for i in Hits['Hits']:
     mean = np.array([7, 3])
-    sigma = 1/(np.log10(i+1))
+    sigma = 1/ (np.log10(i+1))
     cov = np.array([[sigma**2, 0], [0, sigma**2]])
-    a=True
-    while a==True:
+    a = True
+    while a == True:
         signal = rnd.multivariate_normal(mean, cov)
         if signal.any() <= 10 and signal.any() >= 0:
             a=False
@@ -105,17 +107,18 @@ for i in hits:
     y = np.append(y, signal[1])
 
 plt.hist2d(x, y, bins=(10, 10), label="Ort")
-#plt.legend(loc="best")
 plt.colorbar()
 plt.xlim(0, 10)
 plt.ylim(0, 10)
 plt.xlabel("x")
 plt.ylabel("y")
-#plt.axis("equal")
 plt.show()
 
-x = np.array(x, dtype=[("x", np.float)])
-y = np.array(x, dtype=[("y", np.float)])
-
-array2root(x, "NeutrinoMC.root", treename="X_Cord_Hits")
-array2root(y, "NeutrinoMC.root", treename="Y_Cord_Hits")
+#Array mit Namen der Branches
+Ort = np.empty((len(x)), dtype=[("x", np.float), ("y", np.float)])
+#fügt dem Array die Werte hinzu
+Ort["x"] = x
+Ort["y"] = y
+#speichert Array als .root
+array2root(Ort, "build/NeutrinoMC.root",
+           treename="Orte", mode="RECREATE")
