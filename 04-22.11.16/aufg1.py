@@ -17,13 +17,11 @@ for i in range(int(1e5)):
 rec = np.array(GvZz, dtype=[("Energie", np.float)])
 array2root(rec, "NeutrinoMC.root", treename="Signal_MC", mode="RECREATE")
 
-# b) Akzeptanz
+# Aufgabenteil b)
 def detect(E):
     return (1 - np.exp(- E / 2)) **3
 
 Energie = root2array("NeutrinoMC.root", "Signal_MC")
-akzeptiert=np.array([])
-
 GvZz2 = rnd.random(size=len(Energie['Energie']))
 mask = detect(np.array(Energie['Energie'])) >= GvZz2 
 accept = np.array(Energie['Energie'][~mask],dtype=[("Energie",np.float)])
@@ -36,7 +34,6 @@ plt.xlabel("Energie der Neutrinos / TeV")
 plt.ylabel("Anzahl")
 plt.xscale("log")
 plt.yscale("log")
-plt.legend(loc="best")
 plt.legend(loc="best")
 plt.show()
 
