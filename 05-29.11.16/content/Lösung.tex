@@ -1,0 +1,71 @@
+\subsection*{3) a)}
+
+\begin{align*}
+  \mu_0 = \frac{1}{5} \begin{pmatrix} 2 +2 +2 +1 +3 \\ 2 +3 +1 +2 +2 \\ 1 +2 +2 +0 +0 \end{pmatrix} = \begin{pmatrix}2 \\ 2 \\ 1 \end{pmatrix}
+\end{align*}
+\begin{align*}
+  \mu_1 = \frac{1}{5} \begin{pmatrix} 2.5 +2.5 +4 +5.5 +5.5 \\ 2.5 +1.5 +2 +2.5 +1.5 \\ 0 \end{pmatrix} = \begin{pmatrix} 4 \\ 2 \\ 0 \end{pmatrix}
+\end{align*}
+
+$S_W = S_0 + S_1$
+\begin{align*}
+  S_0 &= \begin{pmatrix} 0\\ 0\\ 0\end{pmatrix} \begin{pmatrix} 0& 0& 0\end{pmatrix} + \begin{pmatrix} 0\\ 1\\ 1\end{pmatrix} \begin{pmatrix} 0& 1& 1\end{pmatrix} + \begin{pmatrix} 0\\ -1\\ 1\end{pmatrix} \begin{pmatrix} 0& -1& 1\end{pmatrix} + \begin{pmatrix} -1\\ 0\\ -1\end{pmatrix} \begin{pmatrix} -1& 0& -1\end{pmatrix} \\
+  &+ \begin{pmatrix} 1\\ 0\\ -1\end{pmatrix} \begin{pmatrix} 1& 0& -1\end{pmatrix} = \begin{pmatrix} 2&0&0\\ 0&2&0\\ 0&0&4\end{pmatrix} \\
+  S_1 &= \begin{pmatrix} -1.5\\ 0.5\\ 0\end{pmatrix} \begin{pmatrix} -1.5& 0.5& 0\end{pmatrix} + \begin{pmatrix} -1.5\\ -0.5\\ 0\end{pmatrix} \begin{pmatrix} -1.5& -0.5& 0\end{pmatrix} + \begin{pmatrix} 0\\ 0\\ 0\end{pmatrix} \begin{pmatrix} 0& 0& 0\end{pmatrix} + \begin{pmatrix} 1.5\\ 0.5\\ 0\end{pmatrix} \begin{pmatrix} 1.5& 0.5& 0\end{pmatrix} \\
+  &+ \begin{pmatrix} 1.5\\ -0.5\\ 0\end{pmatrix} \begin{pmatrix} 1.5& -0.5& 0\end{pmatrix} = \begin{pmatrix} 9&0&0\\ 0&1&0\\ 0&0&0\end{pmatrix} \\
+  S_W &= \begin{pmatrix} 11&0&0\\ 0&3&0\\ 0&0&4\end{pmatrix}
+\end{align*}
+\begin{align*}
+  S_B = \begin{pmatrix} -2\\ 0\\ 1\end{pmatrix} \begin{pmatrix} -2& 0& 1\end{pmatrix} = \begin{pmatrix} 4&0&-2\\ 0&0&0\\ -2&0&1\end{pmatrix}
+\end{align*}
+
+
+
+\subsection*{3) b)}
+\begin{align*}
+  S_W^{-1}\,S_B = \begin{pmatrix} \frac{1}{11}&0&0\\ 0&\frac{1}{3}&0\\ 0&0&\frac{1}{4}\end{pmatrix} \begin{pmatrix} 4&0&-2\\ 0&0&0\\ -2&0&1\end{pmatrix} = \begin{pmatrix} \frac{4}{11}&0&\frac{-2}{11}\\ 0&0&0\\ \frac{-1}{2}&0&\frac{1}{4}\end{pmatrix}
+\end{align*}
+Berechnung der Eigenwerte $\lambda_i$:
+\begin{align*}
+  &\det\left(\begin{pmatrix} \frac{4}{11}-\lambda&0&\frac{-2}{11}\\ 0&-\lambda&0\\ \frac{-1}{2}&0&\frac{1}{4}-\lambda\end{pmatrix} \right) = -\lambda\left(\frac{4}{11}-\lambda\right) \left(\frac{1}{4}-\lambda\right) + \frac{\lambda}{11} = -\lambda^3 + \frac{27}{44}\lambda^2 \\
+  &\lambda_1 = 0\ , \ \ \ \lambda_2 = \frac{27}{44}
+\end{align*}
+Berechnung der Eigenvektoren $\vec{r_i}$:
+\begin{align*}
+  \begin{pmatrix} \frac{4}{11}-\lambda_i&0&\frac{-2}{11}\\ 0&-\lambda_i&0\\ \frac{-1}{4}&0&\frac{1}{4}-\lambda_i\end{pmatrix} \underbrace{\begin{pmatrix} x\\ y\\ z\end{pmatrix}}_{=\vec{r_i}} = \begin{pmatrix} 0\\ 0\\ 0\end{pmatrix}
+\end{align*}
+$\lambda_1 = 0$
+\begin{align*}
+  \begin{pmatrix} \frac{4}{11}&0&\frac{-2}{11}\\ 0&0&0\\ \frac{-1}{2}&0&\frac{1}{4}\end{pmatrix} \begin{pmatrix} x\\ y\\ z\end{pmatrix} &= \begin{pmatrix} 0\\ 0\\ 0\end{pmatrix} \\
+  \frac{4}{11}x - \frac{2}{11}z &= 0 \\
+  0 &= 0 \\
+  -\frac{1}{2}x + \frac{1}{4}z &= 0 \\
+  \vec{r_1} = \frac{1}{\sqrt{6}} \begin{pmatrix} 1\\ 1\\ 2\end{pmatrix}
+\end{align*}
+
+$\lambda_2 = \frac{11}{15}$
+\begin{align*}
+  \begin{pmatrix} \frac{4}{11}-\frac{27}{44}&0&\frac{-2}{11}\\ 0&-\frac{27}{44}&0\\ \frac{-1}{2}&0&\frac{1}{4}-\frac{27}{44}\end{pmatrix} \begin{pmatrix} x\\ y\\ z\end{pmatrix} &= \begin{pmatrix} 0\\ 0\\ 0\end{pmatrix} \\
+  -\frac{1}{4}x - \frac{2}{11}z &= 0 \\
+  \frac{27}{44}y &= 0 \\
+  -\frac{1}{2}x - \frac{4}{11} z &= 0 \\
+  \vec{r_2} = \frac{2}{\sqrt{185}} \begin{pmatrix} 4\\ 0\\ -\frac{11}{2} \end{pmatrix}
+\end{align*}
+
+
+
+\subsection*{3) c)}
+\begin{align*}
+  \vec{\lambda} = S_W^{-1}(\vec{\mu_0}-\vec{\mu_1}) = \begin{pmatrix} \frac{1}{11}&0&0\\ 0&\frac{1}{3}&0\\ 0&0&\frac{1}{4}\end{pmatrix} \begin{pmatrix}-2 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} -\frac{2}{11} \\ 0 \\ \frac{1}{4} \end{pmatrix}
+\end{align*}
+
+
+
+\subsection*{3) d)}
+\begin{align*}
+  \vec{\lambda}_{norm} = \frac{44}{\sqrt{185}} \begin{pmatrix} -\frac{2}{11} \\ 0 \\ \frac{1}{4} \end{pmatrix} = \frac{1}{\sqrt{185}}  \begin{pmatrix} -8 \\ 0 \\ 11 \end{pmatrix}
+\end{align*}
+\begin{align*}
+  S_{0,proj} &= \frac{1}{\sqrt{185}} \{-5, 6, 6, -8, -24\} \\
+  S_{1,proj} &= \frac{1}{\sqrt{185}} \{-12, -12, -32, -44, -44\}
+\end{align*}

@@ -1,0 +1,20 @@
+from matplotlib import pyplot as plt
+import numpy as np
+x = -8/np.sqrt(185)
+y = 11/np.sqrt(185)
+plt.plot(-5*x, -5*y, 'ro')
+plt.plot(6*x, 6*y, 'ro')
+plt.plot(6*x, 6*y, 'ro')
+plt.plot(-8*x, -8*y, 'ro')
+plt.plot(24*x, 24*y, 'ro')
+
+plt.plot(-12*x, -12*y, 'bo')
+plt.plot(-12*x, -12*y, 'bo')
+plt.plot(-32*x, -32*y, 'bo')
+plt.plot(-44*x, -44*y, 'bo')
+plt.plot(-44*x, -44*y, 'bo')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid()
+plt.legend(loc="best")
+plt.show()
