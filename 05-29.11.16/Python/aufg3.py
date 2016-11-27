@@ -1,20 +1,20 @@
 from matplotlib import pyplot as plt
 import numpy as np
-x = -8/np.sqrt(185)
-y = 11/np.sqrt(185)
-plt.plot(-5*x, -5*y, 'ro')
-plt.plot(6*x, 6*y, 'ro')
-plt.plot(6*x, 6*y, 'ro')
-plt.plot(-8*x, -8*y, 'ro')
-plt.plot(24*x, 24*y, 'ro')
 
-plt.plot(-12*x, -12*y, 'bo')
-plt.plot(-12*x, -12*y, 'bo')
-plt.plot(-32*x, -32*y, 'bo')
-plt.plot(-44*x, -44*y, 'bo')
-plt.plot(-44*x, -44*y, 'bo')
+lam = 1/np.sqrt(185)*np.array([-8, 0, 11])
+#P0 = P0 * lambda
+P0 = 1/np.sqrt(185)* np.array([-5, 6, 6, -8, -24])
+#P1 = P1 * lambda
+P1 = 1/np.sqrt(185)* np.array([-12, -12, -32, -44, -44])
+#Projektionsgerade
+Proj = 1/np.sqrt(185)* np.linspace(-45, 7, 10)
+
+plt.plot(lam[0]*P0, lam[2]*P0, 'ro', label='Population 0')
+plt.plot(lam[0]*P1, lam[2]*P1, 'bo', label='Population 1')
+plt.plot(lam[0]*Proj, lam[2]*Proj, 'g-', label='Projektionsgerade')
 plt.xlabel('x')
-plt.ylabel('y')
+plt.ylabel('z')
 plt.grid()
 plt.legend(loc="best")
-plt.show()
+plt.savefig('Aufgabe3d.pdf')
+plt.close()
