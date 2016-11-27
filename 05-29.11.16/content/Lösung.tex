@@ -74,3 +74,23 @@ $\lambda_2 = \frac{11}{15}$
   \includegraphics[width=\linewidth]{Python/Aufgabe3d.pdf}
   \caption{Die beiden Populationen auf den Projektionsvektor projiziert.}
 \end{figure}
+
+
+
+
+\subsection*{3) e)}
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{Python/Aufgabe3e.pdf}
+  \caption{Die Projektionsgerade mit den Projizierten Punkten und $\lambda_{cut}$.}
+\end{figure}
+Wir haben $\lambda_{cut} = -12$ gewählt um eine Reinheit von 1 zu erhalten.
+\begin{align*}
+  tp = 4, tn = 1, fp = 0, fn = 5 \\
+\end{align*}
+Wobei $p$ der Population 0 (rot) und $n$ der Population 1 (blau) entspricht. $t$ bedeutet das $p$ und $n$ größer als $\lambda_{cut}$ sind bzw. $f$ das $p$ und $n$ kleiner als $\lambda_{cut}$ sind.
+\begin{align*}
+  Reinheit = \frac{tp}{tp + fp} = 1 \\
+  Effizienz = \frac{tp}{tp + fn} = \frac{4}{9} \approx 0.44 \\
+  Genauigkeit = \frac{tp + fn}{tp + tn + fp + fn} = 0.9
+\end{align*}
