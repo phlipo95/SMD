@@ -1,0 +1,26 @@
+\section*{Aufgabe 4)}
+\subsection*{a)}
+\textbf{Lineare (Fisher) Diskriminanzanalyse:} \\
+Die LDA soll zwei Klassen mit $n$ Observablen durch eine (n-1)-dim Hyperebene optimal trennen. Wird zum Beispiel bei der Trennung von einem Rauschen und eines Signal verwendet. Dadurch wird das Signal besser erkennbar bzw. überhaupt erkennbar. \\
+\textbf{Feature Extraction:} \\
+Die Feature Extraction soll mehrere Attribute zusammenfassen oder transformieren und daraus neue Attribute erstellen. Beipielsweise können ringförmig angeordnete Verteilungen, mit Hilfe von Polarkoordinaten in eine lineare Verteilung transformiert werden. \\
+\textbf{Feature Selection:} \\
+Die Feature Selection verwirft vorhandene Attribute um ein Subset zu finden. Dafür wird zum Beispiel der "Brute Force"-Algorithmus verwendet, welcher durch einfaches ausprobieren aller Möglichkeiten das beste Ergebnis findet(nicht praktikabel). Die Forward-/Backward-Selection ist ein iteratives Verfahren, welches entweder von vorne oder hinten durch alle Messwerte durchläuft und erst bei einer angegeben Qualität stopt. \\
+\\
+Außerdem müssen alle missverständlichen Werte, wie NaN oder Inf, durch bessere Werte ersetzt oder entfernt werden. Zusätzlich dazu müssen konstante Attribute oder Attribute mit zu vielen fehlenden Werten entfernt werden.
+
+
+
+\subsection*{b)}
+Eine Normierung ist Sinnvoll. \\
+Bei der LDA werden normierte Punkte zum Beispiel orthogonal auf die Hyperebene abgebildet, nicht normierte Punkte werden nicht unbedingt orthogonal abgebildet.
+
+
+
+\subsection*{c)}
+Lücken in den Daten werden durch die Mittelwerte der Verteilung aufgefüllt.
+
+
+
+\subsection*{d)}
+Die Datensätze müssen kombinierbar sein, dafür müssen sie die gleichen Attribute haben und gleich viele Einträge besitzten.
