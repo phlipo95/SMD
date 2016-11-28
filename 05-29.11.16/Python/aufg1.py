@@ -5,7 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 #Gaußfunktion
 def gauss(x, y , mu_x, mu_y, sigma_x, sigma_y, rho):
 	return 1/(2*np.pi*sigma_x*sigma_y*np.sqrt(1-rho**2)) * np.exp(-1/(2-2*rho**2)* (((x-mu_x)/sigma_x)**2 + ((y-mu_y)/sigma_y)**2 - (2*rho*(x-mu_x)*(y-mu_y)) / (sigma_x*sigma_y)))
-
+print('----')
 #Anzahl der Messwerte
 n = 250
 #Bereich für die x- und y-Werte um die Erwartungswerte
@@ -63,8 +63,8 @@ plt.close()
 
 
 #Scatterplot
-plt.scatter(X0, Y0, gauss(X0, Y0, mu_x0, mu_y0, sigma_x0, sigma_y0, rho0)*25, marker='o', c=gauss(X0, Y0, mu_x0, mu_y0, sigma_x0, sigma_y0, rho0)*300, alpha=0.8)
-plt.scatter(X1, Y1, gauss(X1, Y1, mu_x1, mu_y1, sigma_x1, sigma_y1, rho1)*25, marker='o', c=gauss(X1, Y1, mu_x1, mu_y1, sigma_x1, sigma_y1, rho1)*300, alpha=0.8)
+plt.scatter(X0, Y0, gauss(X0, Y0, mu_x0, mu_y0, sigma_x0, sigma_y0, rho0)*1000, marker='o', c=gauss(X0, Y0, mu_x0, mu_y0, sigma_x0, sigma_y0, rho0)*300, alpha=0.8)
+plt.scatter(X1, Y1, gauss(X1, Y1, mu_x1, mu_y1, sigma_x1, sigma_y1, rho1)*1000, marker='o', c=gauss(X1, Y1, mu_x1, mu_y1, sigma_x1, sigma_y1, rho1)*300, alpha=0.8)
 plt.show()
 
 plt.scatter(X0, gauss(X0, Y0, mu_x0, mu_y0, sigma_x0, sigma_y0, rho0), marker='o', color='b', alpha=0.3, label='P0')
