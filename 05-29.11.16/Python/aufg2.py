@@ -44,7 +44,7 @@ y_P00 = np.zeros(nentries1, dtype=float)
 #Read in data one by one
 for i in range(nentries):
     tree.GetEntry(i)
-    x_P01[i] = x_vP01 
+    x_P01[i] = x_vP01
     y_P01[i] = y_vP01
 
 for i in range(nentries1):
@@ -137,9 +137,9 @@ def rein(Ha1, Ha2):
         print('Ha2',Ha2[masg])
         print(len(Ha2[masg]))
 
+rein(H11,H12)
 print('hier kommt H11',len(H11),type(H11))
 print('hier kommt H12',len(H12),type(H12))
-rein(H11,H12)
 
 
 
