@@ -8,8 +8,10 @@ def gauss(x, y , mu_x, mu_y, sigma_x, sigma_y, rho):
 
 #Anzahl der Messwerte
 n = 250
-#Bereich für die x- und y-Werte
+#Bereich für die x- und y-Werte um die Erwartungswerte
 Bereich = 20
+
+
 #Population 0 (P0)
 #Erwartungswerte
 mu_x0 = 0
