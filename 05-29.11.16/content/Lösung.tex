@@ -16,13 +16,65 @@ Der Korrelationsfaktor $\rho$:
 \begin{align*}
   \rho = \frac{\sigma_{x|y}}{\sigma_x\,\sigma_y} = \frac{1}{3.5 \cdot 2.1} = \frac{20}{147} \approx 0.136
 \end{align*}
+Wie man in der Abbildung \eqref{fig:Gauß} sehen kann ist die Population 1 eine 2D-Normalverteilung.
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{Python/Aufgabe1a.pdf}
+  \caption{Population 1 in einem Plot aufgetragen.}
+  \label{fig:Gauß}
+\end{figure}
+
+
+\subsection*{1) b)}
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{Python/Aufgabe1b.pdf}
+  \caption{Die beiden Populationen in einem Scatter-Plot.}
+\end{figure}
+
+
+\subsection*{1) c)}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c}
+    & Stichprobe & exakter Wert \\
+    $\mu_{x0}$ & -0.026052 & 0.0 \\
+    $\mu_{y0}$ & 2.968815 & 3.0 \\
+    $\mu_{x1}$ & 5.999412 & 6.0 \\
+    $\mu_{y1}$ & 3.105914 & 3.1 \\
+    Var$_{x0}$ & 12.083473 & 12.25\\
+    Var$_{y0}$ & 6.600300 & 6.76 \\
+    Cov$_0$ & 8.031816 & 8.19 \\
+    Var$_{x1}$ & 12.351492 & 12.25 \\
+    Var$_{y1}$ & 4.460433 & 4.41 \\
+    Cov$_1$ & 0.918914 & 1.0 \\
+    $\rho_0$ & 0.899365 & 0.9 \\
+    $\rho_1$ & 0.123802 & 0.136 \\
+  \end{tabular}
+  \caption{Die Werte für die einzelnen Populationen.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c}
+    & Stichprobe \\
+    Var$_x$ & 24.591647 \\
+    Var$_y$ & 19.062678 \\
+    Cov & 20.517091 \\
+    $\rho_0$ & 0.947611 \\
+  \end{tabular}
+  \caption{Die Werte für die Gesamtheit beider Populationen.}
+\end{table}
+
+
+
 
 
 \subsection*{2)}
 In den Plots in Abbildung \ref{fig:sca} sind in der Reihenfolge $g_1$, $g_2$ und $g_3$ zu sehen.
 \begin{figure}
   \centering
-  \includegraphics[height=5cm]{Python/Scatter.pdf}
+  \includegraphics[width=\linewidth]{Python/Scatter.pdf}
   \caption{Scatterplot mit drauf zu Profezierenden Graden}
   \label{fig:sca}
 \end{figure}
@@ -32,14 +84,14 @@ Im ersten wurden die Messwerte auf die Graden Projeziert und die Populationen in
   g2 = \begin{pmatrix}	-0.6 \\ 0.8 \end{pmatrix} 	\\
   g3 = \begin{pmatrix}	-0.78 \\ 0.62 \end{pmatrix}
 \end{eqnarray}
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[height=7cm]{Python/hist.pdf}
   \caption{Histogramme der unterschiedlichen Schnitte}
   \label{fig:d}
 \end{figure}
 Die Reinheit, sowie die Effizienz sind in Abbildung \ref{fig:eff} in Abhängigkeit des Schnittes zu sehen.
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[height=7cm]{Python/cuts.pdf}
   \caption{Reinheit und Effizienz in Abhägigkeit des Ort des Cuts}
@@ -53,7 +105,6 @@ Die Reinheit, sowie die Effizienz sind in Abbildung \ref{fig:eff} in Abhängigke
 
 
 \subsection*{3) a)}
-
 \begin{align*}
   \mu_0 = \frac{1}{5} \begin{pmatrix} 2 +2 +2 +1 +3 \\ 2 +3 +1 +2 +2 \\ 1 +2 +2 +0 +0 \end{pmatrix} = \begin{pmatrix}2 \\ 2 \\ 1 \end{pmatrix}
 \end{align*}
@@ -133,7 +184,6 @@ $\lambda_2 = \frac{11}{15}$
 
 
 \subsection*{3) e)}
-
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{Python/Aufgabe3e.pdf}
   \caption{Die Projektionsgerade mit den Projizierten Punkten und $\lambda_{cut}$.}
@@ -148,3 +198,32 @@ Wobei $p$ der Population 0 (rot) und $n$ der Population 1 (blau) entspricht. $t$
   Effizienz = \frac{tp}{tp + fn} = \frac{4}{9} \approx 0.44 \\
   Genauigkeit = \frac{tp + fn}{tp + tn + fp + fn} = 0.9
 \end{align*}
+
+
+
+
+\subsection*{4) a)}
+\textbf{Lineare (Fisher) Diskriminanzanalyse:} \\
+Die LDA soll zwei Klassen mit $n$ Observablen durch eine (n-1)-dim Hyperebene optimal trennen. Wird zum Beispiel bei der Trennung von einem Rauschen und eines Signal verwendet. Dadurch wird das Signal besser erkennbar bzw. überhaupt erkennbar. \\
+\textbf{Feature Extraction:} \\
+Die Feature Extraction soll mehrere Attribute zusammenfassen oder transformieren und daraus neue Attribute erstellen. Beipielsweise können ringförmig angeordnete Verteilungen, mit Hilfe von Polarkoordinaten in eine lineare Verteilung transformiert werden. \\
+\textbf{Feature Selection:} \\
+Die Feature Selection verwirft vorhandene Attribute um ein Subset zu finden. Dafür wird zum Beispiel der "Brute Force"-Algorithmus verwendet, welcher durch einfaches ausprobieren aller Möglichkeiten das beste Ergebnis findet(nicht praktikabel). Die Forward-/Backward-Selection ist ein iteratives Verfahren, welches entweder von vorne oder hinten durch alle Messwerte durchläuft und erst bei einer angegeben Qualität stopt. \\
+\\
+Außerdem müssen alle missverständlichen Werte, wie NaN oder Inf, durch bessere Werte ersetzt oder entfernt werden. Zusätzlich dazu müssen konstante Attribute oder Attribute mit zu vielen fehlenden Werten entfernt werden.
+
+
+
+\subsection*{4) b)}
+Eine Normierung ist Sinnvoll. \\
+Bei der LDA werden normierte Punkte zum Beispiel orthogonal auf die Hyperebene abgebildet, nicht normierte Punkte werden nicht unbedingt orthogonal abgebildet.
+
+
+
+\subsection*{4) c)}
+Lücken in den Daten werden durch die Mittelwerte der Verteilung aufgefüllt.
+
+
+
+\subsection*{4) d)}
+Die Datensätze müssen kombinierbar sein, dafür müssen sie die gleichen Attribute haben und gleich viele Einträge besitzten.
