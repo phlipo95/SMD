@@ -71,33 +71,24 @@ vec2 = np.matrix([x_P00,y_P00])
 G1 = np.matrix([[-1],[0]])
 G2 = np.matrix([[-3],[4]])
 G2 = G2/np.linalg.norm(G2)
+print('G2', G2)
 G3 = np.matrix([[-5],[4]])
 G3 = G3/np.linalg.norm(G3)
+print('G3', G3)
 
 def z(vec, G):
     return np.transpose(np.array(np.transpose(vec[:,:])*G))
-'''
 
 #Scatterplot
 plt.figure(1)
-plt.subplot(3,1,1)
 plt.scatter(x_P01,y_P01,color='r',alpha=0.1)
 plt.scatter(x_P00,y_P00,color='b',alpha=0.1)
-plt.plot(G1[0]*z(vec1,G1)[:],G1[1]*z(vec1,G1)[:], 'go',alpha=0.2)
-plt.plot(G1[0]*z(vec2,G1)[:],G1[1]*z(vec2,G1)[:], 'yo',alpha=0.2)
-plt.subplot(3,1,2)
-plt.scatter(x_P01,y_P01,color='r',alpha=0.2)
-plt.scatter(x_P00,y_P00,color='b',alpha=0.2)
-plt.plot(G2[0]*z(vec1,G2)[:],G2[1]*z(vec1,G2)[:], 'go',alpha=0.2)
-plt.plot(G2[0]*z(vec2,G2)[:],G2[1]*z(vec2,G2)[:], 'yo',alpha=0.2)
-plt.subplot(3,1,3)
-plt.scatter(x_P01,y_P01,color='r',alpha=0.2)
-plt.scatter(x_P00,y_P00,color='b',alpha=0.2)
-plt.plot(G3[0]*z(vec1,G3)[:],G3[1]*z(vec1,G3)[:], 'go',alpha=0.2)
-plt.plot(G3[0]*z(vec2,G3)[:],G3[1]*z(vec2,G3)[:], 'yo',alpha=0.2)
+plt.plot(x,g1(x),label='g1')
+plt.plot(x,g2(x),label='g2')
+plt.plot(x,g3(x),label='g3')
+plt.legend(loc='best')
 plt.savefig('Scatter.pdf')
 plt.close()
-'''
 
 #Histogramme zum scatterplot
 plt.figure(1)

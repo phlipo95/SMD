@@ -19,19 +19,31 @@ Der Korrelationsfaktor $\rho$:
 
 
 \subsection*{2)}
-In den Plots sind in der Reihenfolge $g_1$, $g_2$ und $g_3$ zu sehen. Im ersten wurden die Messwerte auf die Graden Projeziert und die Populationen in jeweils einen Histogramm dargestellt.
+In den Plots in Abbildung \ref{fig:sca} sind in der Reihenfolge $g_1$, $g_2$ und $g_3$ zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[height=5cm]{Python/Scatter.pdf}
+  \caption{Scatterplot mit drauf zu Profezierenden Graden}
+  \label{fig:sca}
+\end{figure}
+Im ersten wurden die Messwerte auf die Graden Projeziert und die Populationen in jeweils einen Histogramm dargestellt. Die Projektionsvektoren sind
+\begin{eqnarray}
+  g1 = \begin{pmatrix}	1 \\ 0 \end{pmatrix}	\\
+  g2 = \begin{pmatrix}	-0.6 \\ 0.8 \end{pmatrix} 	\\
+  g3 = \begin{pmatrix}	-0.78 \\ 0.62 \end{pmatrix}
+\end{eqnarray}
 \begin{figure}
   \centering
   \includegraphics[height=7cm]{Python/hist.pdf}
-  \caption{<+caption text+>}
-  \label{fig:<+label+>}
+  \caption{Histogramme der unterschiedlichen Schnitte}
+  \label{fig:d}
 \end{figure}
 Die Reinheit, sowie die Effizienz sind in Abbildung \ref{fig:eff} in Abhängigkeit des Schnittes zu sehen.
 \begin{figure}
   \centering
   \includegraphics[height=7cm]{Python/cuts.pdf}
-  \caption{<+caption text+>}
-  \label{fig:<+label+>}
+  \caption{Reinheit und Effizienz in Abhägigkeit des Ort des Cuts}
+  \label{fig:b}
 \end{figure}
 
 
