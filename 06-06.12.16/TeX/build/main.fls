@@ -392,6 +392,10 @@ INPUT ./Figures/reinheit2.pdf
 INPUT ./Figures/reinheit2.pdf
 INPUT ./Figures/SigZuUnt2.pdf
 INPUT ./Figures/SigZuUnt2.pdf
+INPUT ./Figures/Aufgabe3a.png
+INPUT ./Figures/Aufgabe3a.png
+INPUT ./Figures/Aufgabe3b.png
+INPUT ./Figures/Aufgabe3b.png
 INPUT build/main.aux
 INPUT build/main.aux
 INPUT build/main.run.xml
