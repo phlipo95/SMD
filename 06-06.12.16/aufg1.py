@@ -1,3 +1,4 @@
+
 def aufg1():
     import numpy as np
     import ROOT
@@ -22,7 +23,7 @@ def aufg1():
         SGI = np.linalg.inv(SG)
         diffmy = np.matrix((my1-my2).reshape(2,1))
         lamda =  SGI*diffmy/np.linalg.norm(SGI*diffmy)
-        print(lamda)
+        print('Lamda = ',lamda)
         return lamda
 
     #Stelle die Population in eine 1D Histogramm da
@@ -62,7 +63,8 @@ def aufg1():
         plt.plot(x,sig/unt,label=r'Signal/Untergrund')
         plt.legend(loc='best')
         plt.subplot(2,1,2)
-        plt.plot(x,sig/np.sqrt(sig + unt),label=r'Signal/Untergrund')
+        plt.plot(x,sig/np.sqrt(sig + unt),label=r'Signal/ $\sqrt{Signal + Untergrund}$')
+        plt.legend(loc='best')
         plt.savefig(name.__add__('.pdf'))
         plt.close()
 
@@ -79,12 +81,17 @@ def aufg1():
     S_P1 = berechneKovS(P1, myP1)
 
     lam1 = berechneLDA(S_P0,S_P1,myP0,myP1)
+    
+    plotHist('./TeX/Figures/firstHist.pdf', P0, P1,lam1,'P0','P1')
+    plotHist('./TeX/Figures/secondHist.pdf', P01, P1, lam1, 'P0', 'P1')
 
-    plotHist('firstHist.pdf', P0, P1,lam1,'P0','P1')
-
-    x1, sig1, sig2 = berechneEffiRein(lam1,P0,P1,'blabla.pdf')
-    SigZuUnt(x1, sig1, sig2, 'abc')
+    x1, sig1, sig2 = berechneEffiRein(lam1,P0,P1,'./TeX/Figures/reinheit1.pdf')
+    SigZuUnt(x1, sig1, sig2, './TeX/Figures/SigZuUnt1')
+    
+    x2, sig3, sig4 = berechneEffiRein(lam1,P01,P1,'./TeX/Figures/reinheit2.pdf')
+    SigZuUnt(x2, sig3, sig4, './TeX/Figures/SigZuUnt2')
     
     berechneKovS(P1, myP1)
 if __name__ == '__main__':
     aufg1()
+

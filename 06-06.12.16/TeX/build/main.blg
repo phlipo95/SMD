@@ -1,0 +1,5 @@
+[0] Config.pm:354> INFO - This is Biber 2.6
+[0] Config.pm:357> INFO - Logfile is 'build/main.blg'
+[28] biber:302> INFO - === Mo Dez  5, 2016, 20:36:11
+[45] Biber.pm:359> INFO - Reading 'build/main.bcf'
+[111] Utils.pm:164> WARN - No data sources defined!
