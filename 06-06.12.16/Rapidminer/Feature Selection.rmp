@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="7.2.003">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="7.2.003" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="retrieve" compatibility="7.2.003" expanded="true" height="68" name="Retrieve resultA" width="90" x="45" y="34">
+        <parameter key="repository_entry" value="//Local Repository/resultA"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="7.2.003" expanded="true" height="82" name="Set Role" width="90" x="246" y="34">
+        <parameter key="attribute_name" value="label"/>
+        <parameter key="target_role" value="label"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="remove_useless_attributes" compatibility="7.2.003" expanded="true" height="82" name="Remove Useless Attributes" width="90" x="447" y="34">
+        <parameter key="numerical_min_deviation" value="0.0"/>
+        <parameter key="nominal_useless_above" value="1.0"/>
+        <parameter key="nominal_remove_id_like" value="false"/>
+        <parameter key="nominal_useless_below" value="0.0"/>
+      </operator>
+      <operator activated="true" class="featselext:mrmr_feature_selection" compatibility="1.1.004" expanded="true" height="82" name="MRMR-FS" width="90" x="648" y="34">
+        <parameter key="normalize_weights" value="false"/>
+        <parameter key="sort_weights" value="true"/>
+        <parameter key="sort_direction" value="ascending"/>
+        <parameter key="sets_or_ranks" value="sets"/>
+        <parameter key="calculate full ranking" value="true"/>
+        <parameter key="k" value="5"/>
+        <parameter key="relevance_redundancy_relation" value="quotient"/>
+        <parameter key="use_ensemble_method" value="none"/>
+        <parameter key="ensemble_size" value="30"/>
+        <parameter key="logging" value="false"/>
+      </operator>
+      <connect from_op="Retrieve resultA" from_port="output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Remove Useless Attributes" to_port="example set input"/>
+      <connect from_op="Remove Useless Attributes" from_port="example set output" to_op="MRMR-FS" to_port="example set"/>
+      <connect from_op="MRMR-FS" from_port="weights" to_port="result 1"/>
+      <connect from_op="MRMR-FS" from_port="example set" to_port="result 2"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+    </process>
+  </operator>
+</process>

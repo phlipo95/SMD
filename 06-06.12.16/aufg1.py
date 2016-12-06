@@ -35,27 +35,27 @@ def aufg1():
         plt.close()
 
     #Berchne Effizienz und Reinheit
-    def berechneEffiRein(lam, menge1, menge2, plotname):
-        proj1 = np.transpose(menge1[:,:])*lam
-        proj2 = np.transpose(menge2[:,:])*lam
-        kE = np.asscalar(min([min(proj1),min(proj2)]))
-        gE = np.asscalar(max([max(proj1),max(proj2)]))
-        x = np.linspace(kE,gE,10)
-        pM1 = np.array([]); nM1 = np.array([]); pM2 = np.array([])
+    def berechneEffiRein(lam, menge2, menge1, plotname):
+        menge1 = np.transpose(menge1[:,:])*lam
+        menge2 = np.transpose(menge2[:,:])*lam
+        kE = np.asscalar(min([min(menge1),min(menge2)]))
+        gE = np.asscalar(max([max(menge1),max(menge2)])-1)
+        x = np.linspace(kE,gE,100)
+        pRau = np.array([]); nRau = np.array([]); pSig = np.array([])
         for a in x:
-            mask = menge1 >= a
-            masg = menge2 >= a
-            pM1 = np.append(pM1, len(menge1[mask]))
-            nM1 = np.append(nM1, len(menge1[~mask]))
-            pM2 = np.append(pM2, len(menge2[masg]))
-        reinheit = np.array(pM2/(pM2+pM1))
-        effizienz = np.array(pM2/(pM2+nM1))
+            rausch = menge1 >= a
+            signal = menge2 >= a
+            pRau = np.append(pRau, len(np.transpose(menge1[rausch])))
+            nRau = np.append(nRau, len(np.transpose(menge1[~rausch])))
+            pSig = np.append(pSig, len(np.transpose(menge2[signal])))
+        reinheit = np.array(pSig/(pSig+pRau))
+        effizienz = np.array(pSig/(pSig+nRau))
         plt.plot(x, reinheit,label='Reinheit')
         plt.plot(x, effizienz,label='Effizienz')
         plt.legend(loc='best')
         plt.savefig(plotname)
         plt.close()
-        return x, pM1, pM2
+        return x, pRau, pSig
 
     def SigZuUnt(x, sig, unt, name):
         plt.figure(1)
@@ -85,11 +85,11 @@ def aufg1():
     plotHist('./TeX/Figures/firstHist.pdf', P0, P1,lam1,'P0','P1')
     plotHist('./TeX/Figures/secondHist.pdf', P01, P1, lam1, 'P0', 'P1')
 
-    x1, sig1, sig2 = berechneEffiRein(lam1,P0,P1,'./TeX/Figures/reinheit1.pdf')
-    SigZuUnt(x1, sig1, sig2, './TeX/Figures/SigZuUnt1')
+    x1, Rau1, Sig1 = berechneEffiRein(lam1,P0,P1,'./TeX/Figures/reinheit1.pdf')
+    SigZuUnt(x1, Sig1, Rau1, './TeX/Figures/SigZuUnt1')
     
-    x2, sig3, sig4 = berechneEffiRein(lam1,P01,P1,'./TeX/Figures/reinheit2.pdf')
-    SigZuUnt(x2, sig3, sig4, './TeX/Figures/SigZuUnt2')
+    x2, Rau2, Sig2 = berechneEffiRein(lam1,P01,P1,'./TeX/Figures/reinheit2.pdf')
+    SigZuUnt(x2, Sig2, Rau2,'./TeX/Figures/SigZuUnt2')
     
     berechneKovS(P1, myP1)
 if __name__ == '__main__':
