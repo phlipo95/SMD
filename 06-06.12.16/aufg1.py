@@ -74,12 +74,16 @@ def aufg1():
     P01 = rooteinlesen("./zwei_populationen.root","P_0_1000")
     
     myP1 = np.array([np.mean(P1[0,:]),np.mean(P01[1,:])])
+    print('Mittelwert myP1 = ',myP1)
     myP0 = np.array([np.mean(P0[0,:]),np.mean(P0[1,:])])
+    print('Mittelwert myP0 = ',myP0)
     myP01 = np.array([np.mean(P01[0,:]),np.mean(P01[1,:])])
+    print('Mittelwert myP01 = ',myP01)
 
     S_P0 = berechneKovS(P0, myP0)
+    print('S_P0 = ',S_P0)
     S_P1 = berechneKovS(P1, myP1)
-
+    print('S_P1 = ', S_P1)
     lam1 = berechneLDA(S_P0,S_P1,myP0,myP1)
     
     plotHist('./TeX/Figures/firstHist.pdf', P0, P1,lam1,'P0','P1')

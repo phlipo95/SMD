@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber build/main"] 1480966570 "build/main.bcf" "build/main.bbl" "build/main" 1481041185
-  "build/main.bcf" 1481041185 94332 bdcda53215b7f84e8f84b4a8dbe0f70a ""
+["biber build/main"] 1480966570 "build/main.bcf" "build/main.bbl" "build/main" 1481046467
+  "build/main.bcf" 1481046466 94332 bdcda53215b7f84e8f84b4a8dbe0f70a ""
   (generated)
-  "build/main.bbl"
   "build/main.blg"
-["pdflatex"] 1481041181 "main.tex" "build/main.pdf" "main" 1481041185
+  "build/main.bbl"
+["pdflatex"] 1481046463 "main.tex" "build/main.pdf" "main" 1481046467
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
@@ -201,22 +201,25 @@
   "/home/maximilian/.local/texlive/2016/texmf-var/web2c/luatex/lualatex.fmt" 1477253176 1246192 60f1d464240d4bacad804d8689da690f ""
   "Figures/Aufgabe3a.png" 1480974123 150231 d98f87b5255dc7fc0930de7dc404abf2 ""
   "Figures/Aufgabe3b.png" 1480974184 127186 f2fc30097a889d43beb64fceca6ebf28 ""
+  "Figures/Aufgabe3c1.png" 1481046165 141486 6052431090b667342d88531832cdfaa9 ""
+  "Figures/Aufgabe3c2.png" 1481046119 133032 6e5982af19255c55825ecb38fca190ea ""
+  "Figures/Aufgabe3c3.png" 1481046042 133926 9e0a91e9a209eb681f904143abde3eed ""
   "Figures/SigZuUnt1.pdf" 1481040601 26256 19fdad27009b153d01a0d06fe003b3bb ""
   "Figures/SigZuUnt2.pdf" 1481040601 26330 288070722fcb379594797851e2e0702d ""
   "Figures/firstHist.pdf" 1481040600 6499 0b154afb22b20b8ec85af5b0940bb699 ""
   "Figures/reinheit1.pdf" 1481040600 10568 68537d3da39633dd9694fb2fca99bc9e ""
   "Figures/reinheit2.pdf" 1481040601 10556 b49599114b44c4a4b524a788d51bc401 ""
   "Figures/secondHist.pdf" 1481040600 6511 f1795d9576b2b86182a92e18b027a2a8 ""
-  "Lösung.tex" 1481041172 2460 8cd76279355716cbac14b67d963ccd4a ""
-  "build/main.aux" 1481041185 2359 ca8b8b0fe5675af9fe04f2a9d835d7a0 ""
+  "Lösung.tex" 1481046444 2788 9219bff7dd4d40a1dec2bd5cd1e790e2 ""
+  "build/main.aux" 1481046466 2678 6e8d5bfb9712a6666f102cef4c3795e3 ""
   "build/main.bbl" 1480966571 0 d41d8cd98f00b204e9800998ecf8427e "biber build/main"
-  "build/main.run.xml" 1481041185 2223 4d266ac76becff7258924741fcd1121c ""
+  "build/main.run.xml" 1481046466 2223 4d266ac76becff7258924741fcd1121c ""
   "header.tex" 1480331935 3202 1cfea0c932ab987380bf0572890642f5 ""
   "main.tex" 1480972429 411 7ad429a3c3709a42f7af83881d568aa1 ""
   (generated)
-  "build/main.aux"
-  "build/main.run.xml"
-  "build/main.bcf"
   "build/main.pdf"
+  "build/main.bcf"
   "build/main.log"
   "/home/maximilian/.local/texlive/2016/texmf-var/m_t_x_t_e_s_t.tmp"
+  "build/main.aux"
+  "build/main.run.xml"

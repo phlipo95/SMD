@@ -396,6 +396,12 @@ INPUT ./Figures/Aufgabe3a.png
 INPUT ./Figures/Aufgabe3a.png
 INPUT ./Figures/Aufgabe3b.png
 INPUT ./Figures/Aufgabe3b.png
+INPUT ./Figures/Aufgabe3c1.png
+INPUT ./Figures/Aufgabe3c1.png
+INPUT ./Figures/Aufgabe3c2.png
+INPUT ./Figures/Aufgabe3c2.png
+INPUT ./Figures/Aufgabe3c3.png
+INPUT ./Figures/Aufgabe3c3.png
 INPUT build/main.aux
 INPUT build/main.aux
 INPUT build/main.run.xml
