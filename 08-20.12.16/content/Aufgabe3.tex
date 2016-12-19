@@ -1,0 +1,29 @@
+\section*{Aufgabe 3)}
+
+\subsection*{a)}
+\begin{align*}
+  L(b\,|\,x_1,…,x_n) = \prod \limits_{i=1}^{n}\,f(x_i\,|\,b) = f(x_1|b)\,f(x_2\,|\,b)\,…\,f(x_n\,|\,b)
+\end{align*}
+Ziel ist es das Maximum dieser Funktion zu finden. \\
+Für das Maximum gleichverteilter Zufallszahlen gilt Maximum = max\{$x_1,…,x_n$\}.
+\begin{align*}
+  b \rightarrow \frac{1}{b^n}\text{max}\{x_1,…,x_n\} \ \ \text{ist streng monoton fallend}
+\end{align*}
+Das Maximum dieser Funktion wird nun bei dem kleinst möglichen $b$ angenommen, welches $b \ge $\,max\{$x_1,…,x_n$\} erfüllt.
+\begin{align*}
+  b^* = \text{max}\{x_1,…,x_n\}
+\end{align*}
+
+\subsection*{b)}
+Der Schätzer ist für sehr große Stichproben anähernd Erwartungstreu, es gilt aber immer:
+\begin{align*}
+  E(b^*) \le b
+\end{align*}
+Bei kleineren Stichproben treten jedoch Probleme auf, im extrem Fall $n = 1$ gilt:
+\begin{align*}
+  E(b^*) = \frac{b}{2}
+\end{align*}
+Verbessern kann man das Ergebnis durch den Faktor $\frac{n+1}{n}$.
+\begin{align*}
+  b^* = \frac{n+1}{n} \text{max}\{x_1,…,x_n\}
+\end{align*}
