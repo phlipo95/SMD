@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber build/main"] 1484687540 "build/main.bcf" "build/main.bbl" "build/main" 1484689106
-  "build/main.bcf" 1484689105 94332 bdcda53215b7f84e8f84b4a8dbe0f70a ""
+["biber build/main"] 1484690427 "build/main.bcf" "build/main.bbl" "build/main" 1484690432
+  "build/main.bcf" 1484690432 94332 bdcda53215b7f84e8f84b4a8dbe0f70a ""
   (generated)
-  "build/main.bbl"
   "build/main.blg"
-["pdflatex"] 1484689102 "main.tex" "build/main.pdf" "main" 1484689106
+  "build/main.bbl"
+["pdflatex"] 1484690428 "main.tex" "build/main.pdf" "main" 1484690432
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
@@ -208,19 +208,20 @@
   "Python/Regulierungsstärke3.pdf" 1484688337 10953 ffc5052515aa8a91a61d2bfd6df79f3a ""
   "Python/TaskA.pdf" 1484687135 11470 1de51356068c3f5366435af52847e25f ""
   "Python/gewichtung.pdf" 1484688332 11170 cb20789ce3452f4dc9acca6677b18682 ""
-  "build/main.aux" 1484689105 2664 836f0f8b9b92abc5d98defb5cb85c859 ""
-  "build/main.bbl" 1484687542 0 d41d8cd98f00b204e9800998ecf8427e "biber build/main"
-  "build/main.run.xml" 1484689105 2223 4d266ac76becff7258924741fcd1121c ""
-  "content/Aufgabe1.tex" 1484687534 143 d1a3bde4e5bb616570774d65db426f10 ""
+  "Task_1.jpg" 1484690237 781030 38610b5814f1d98f5e7cb6da2082108c ""
+  "build/main.aux" 1484690432 2669 f246604aa13af9bbd214ca3b79ace32e ""
+  "build/main.bbl" 1484690428 0 d41d8cd98f00b204e9800998ecf8427e "biber build/main"
+  "build/main.run.xml" 1484690432 2223 4d266ac76becff7258924741fcd1121c ""
+  "content/Aufgabe1.tex" 1484690422 293 7950c60b795c8295347a7925b8803657 ""
   "content/Aufgabe2.tex" 1481571284 0 d41d8cd98f00b204e9800998ecf8427e ""
   "content/Aufgabe3.tex" 1484689097 1466 55de6c662b9a92744ef0029ba7c8e7ee ""
   "content/Aufgabe4.tex" 1481571284 0 d41d8cd98f00b204e9800998ecf8427e ""
   "header.tex" 1481571284 3202 1cfea0c932ab987380bf0572890642f5 ""
   "main.tex" 1481571284 521 b3728593d5fabf57c4bd6d453ede370e ""
   (generated)
+  "build/main.log"
+  "build/main.aux"
+  "build/main.pdf"
   "build/main.bcf"
   "/home/maximilian/.local/texlive/2016/texmf-var/m_t_x_t_e_s_t.tmp"
-  "build/main.aux"
   "build/main.run.xml"
-  "build/main.pdf"
-  "build/main.log"

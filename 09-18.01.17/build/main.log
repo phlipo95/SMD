@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.23)  17 JAN 2017 22:38
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.23)  17 JAN 2017 23:00
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2044,17 +2044,24 @@ LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 6.9999pt on input line 22.
  [1
 
-{/home/maximilian/.local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./content/Aufgabe1.tex <./Python/TaskA.pdf, id=14, 433.62pt x 289.08pt>
+{/home/maximilian/.local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./content/Aufgabe1.tex <./Task_1.jpg, id=14, 1822.81pt x 1750.54pt>
+File: ./Task_1.jpg Graphic file (type jpg)
+ <use ./Task_1.jpg>
+Package luatex.def Info: ./Task_1.jpg used on input line 5.
+(luatex.def)             Requested size: 418.25555pt x 401.65413pt.
+ <./Python/TaskA.pdf, id=15, 433.62pt x 289.08pt>
 File: ./Python/TaskA.pdf Graphic file (type pdf)
  <use ./Python/TaskA.pdf>
-Package luatex.def Info: ./Python/TaskA.pdf used on input line 3.
+Package luatex.def Info: ./Python/TaskA.pdf used on input line 10.
 (luatex.def)             Requested size: 418.25555pt x 278.85017pt.
-) (./content/Aufgabe2.tex) (./content/Aufgabe3.tex
+) (./content/Aufgabe2.tex) (./content/Aufgabe3.tex [2
+
+<./Task_1.jpg>] [3<./Python/TaskA.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 4--12
 
  []
 
-<./Python/Regulierungsstärke0.0.pdf, id=15, 433.62pt x 289.08pt>
+<./Python/Regulierungsstärke0.0.pdf, id=62, 433.62pt x 289.08pt>
 File: ./Python/Regulierungsstärke0.0.pdf Graphic file (type pdf)
  <use ./Python/Regulierungsstärke0.0.pdf>
 Package luatex.def Info: ./Python/Regulierungsstärke0.0.pdf used on input line 16.
@@ -2063,67 +2070,65 @@ LaTeX Font Info:    Font shape `EU2/LatinModernMath(1)/m/n' will be
 (Font)              scaled to size 5.00008pt on input line 17.
 LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 4.99992pt on input line 17.
- [2
-
-<./Python/TaskA.pdf>] <./Python/Regulierungsstärke0.1.pdf, id=56, 433.62pt x 289.08pt>
+ <./Python/Regulierungsstärke0.1.pdf, id=63, 433.62pt x 289.08pt>
 File: ./Python/Regulierungsstärke0.1.pdf Graphic file (type pdf)
  <use ./Python/Regulierungsstärke0.1.pdf>
 Package luatex.def Info: ./Python/Regulierungsstärke0.1.pdf used on input line 23.
 (luatex.def)             Requested size: 418.25555pt x 278.85017pt.
- [3<./Python/Regulierungsstärke0.0.pdf>] <./Python/Regulierungsstärke0.3.pdf, id=95, 433.62pt x 289.08pt>
+ [4<./Python/Regulierungsstärke0.0.pdf>] <./Python/Regulierungsstärke0.3.pdf, id=104, 433.62pt x 289.08pt>
 File: ./Python/Regulierungsstärke0.3.pdf Graphic file (type pdf)
  <use ./Python/Regulierungsstärke0.3.pdf>
 Package luatex.def Info: ./Python/Regulierungsstärke0.3.pdf used on input line 29.
 (luatex.def)             Requested size: 418.25555pt x 278.85017pt.
- <./Python/Regulierungsstärke0.7.pdf, id=96, 433.62pt x 289.08pt>
+ <./Python/Regulierungsstärke0.7.pdf, id=105, 433.62pt x 289.08pt>
 File: ./Python/Regulierungsstärke0.7.pdf Graphic file (type pdf)
  <use ./Python/Regulierungsstärke0.7.pdf>
 Package luatex.def Info: ./Python/Regulierungsstärke0.7.pdf used on input line 35.
 (luatex.def)             Requested size: 418.25555pt x 278.85017pt.
- <./Python/Regulierungsstärke3.pdf, id=97, 433.62pt x 289.08pt>
+ <./Python/Regulierungsstärke3.pdf, id=106, 433.62pt x 289.08pt>
 File: ./Python/Regulierungsstärke3.pdf Graphic file (type pdf)
  <use ./Python/Regulierungsstärke3.pdf>
 Package luatex.def Info: ./Python/Regulierungsstärke3.pdf used on input line 41.
 (luatex.def)             Requested size: 418.25555pt x 278.85017pt.
- <./Python/Regulierungsstärke10.pdf, id=98, 433.62pt x 289.08pt>
+ <./Python/Regulierungsstärke10.pdf, id=107, 433.62pt x 289.08pt>
 File: ./Python/Regulierungsstärke10.pdf Graphic file (type pdf)
  <use ./Python/Regulierungsstärke10.pdf>
 Package luatex.def Info: ./Python/Regulierungsstärke10.pdf used on input line 47.
 (luatex.def)             Requested size: 418.25555pt x 278.85017pt.
- <./Python/gewichtung.pdf, id=99, 433.62pt x 289.08pt>
+ <./Python/gewichtung.pdf, id=108, 433.62pt x 289.08pt>
 File: ./Python/gewichtung.pdf Graphic file (type pdf)
  <use ./Python/gewichtung.pdf>
 Package luatex.def Info: ./Python/gewichtung.pdf used on input line 55.
 (luatex.def)             Requested size: 418.25555pt x 278.85017pt.
 ) (./content/Aufgabe4.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
- [4<./Python/Regulierungsstärke0.1.pdf>] [5<./Python/Regulierungsstärke0.3.pdf>] [6<./Python/Regulierungsstärke0.7.pdf>] [7<./Python/Regulierungsstärke3.pdf>] [8<./Python/Regulierungsstärke10.pdf>] [9<./Python/gewichtung.pdf>]
+ [5<./Python/Regulierungsstärke0.1.pdf>] [6<./Python/Regulierungsstärke0.3.pdf>] [7<./Python/Regulierungsstärke0.7.pdf>] [8<./Python/Regulierungsstärke3.pdf>] [9<./Python/Regulierungsstärke10.pdf>] [10<./Python/gewichtung.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
  (./build/main.aux
 Language ngerman already loaded; id is 8)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 836F0F8B9B92ABC5D98DEFB5CB85C859;2664.
+(rerunfilecheck)             Checksum: F246604AA13AF9BBD214CA3B79ACE32E;2669.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 45033 strings out of 495118
+ 45045 strings out of 495118
  100000,1648299 words of node,token memory allocated
- 1066 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 64 glue, 1 kern, 42 attribute, 58 glue_spec, 42 attribute_list, 1 write nodes
-   avail lists: 1:3,2:339,3:104,4:43,5:36,6:360,7:218,8:47,9:106,10:7,11:51
- 47251 multiletter control sequences out of 65536+600000
- 100 fonts using 32520087 bytes
+ 1077 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 65 glue, 1 kern, 43 attribute, 58 glue_spec, 43 attribute_list, 1 write nodes
+   avail lists: 1:3,2:339,3:104,4:43,5:33,6:360,7:218,8:47,9:106,10:7,11:51
+ 47255 multiletter control sequences out of 65536+600000
+ 100 fonts using 32519935 bytes
  71i,7n,104p,8833b,881s stack positions out of 5000i,500n,10000p,200000b,100000s
 </home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on main.pdf (9 pages, 86472 bytes).
+Output written on main.pdf (10 pages, 868210 bytes).
 
-PDF statistics: 365 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 131072)
+PDF statistics: 374 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

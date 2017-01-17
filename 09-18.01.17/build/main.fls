@@ -378,6 +378,8 @@ INPUT /home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/
 INPUT /home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT ./content/Aufgabe1.tex
 INPUT ./content/Aufgabe1.tex
+INPUT ./Task_1.jpg
+INPUT ./Task_1.jpg
 INPUT ./Python/TaskA.pdf
 INPUT ./Python/TaskA.pdf
 INPUT ./content/Aufgabe2.tex
