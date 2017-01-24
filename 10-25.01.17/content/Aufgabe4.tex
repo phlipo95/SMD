@@ -1,0 +1,75 @@
+\section*{Aufgabe 4}
+Die Wahrscheinlichkeiten, dass Kaonen, Pionen und Protonen beobachtet wurden, werden mit dem Bayes Theorem berechnet:
+\begin{align*}
+	p(H_i|D,I) &= \frac{p(H_i|I) p(D|H_i,I)}{p(D|I)}
+\end{align*}
+Die Wahrscheinlichkeiten $p(D|H_i,I)$ die Daten $D$ zu messen, sind aus den Likelihoods gegeben. \\
+Die Prior-Informtionen sind gegeben mit
+\begin{align*}
+	p_\Pi(H_1|I) &= 0,8	\\
+	p_K(H_2|I) &= 0,1	\\
+	p_p(H_3|I) &= 0,1
+\end{align*}
+Die Normierung des zu berechnenden Posteriors $p(D|I)$ ist gegeben mit:
+\begin{align*}
+	p(D|I) &= \sum\limits_i p(H_i|I) p(D|H_i)
+\end{align*}
+
+\begin{itemize}
+	\item[a)]
+		Gegeben sind:
+		\begin{align*}
+			p_\Pi(D|H_1,I) &= 0,13	\\
+			p_K(D|H_2,I) &= 1,5	\\
+			p_p(D|H_3,I) &= 0,5
+		\end{align*}
+		Die Prior-Information ergibt sich zu:
+		\begin{align*}
+			p(D|I) &= 0,8 \cdot 0,13 + 0,1 \cdot 1,5  + 0,1 \cdot 0,5	\\
+				&= 0,304
+		\end{align*}
+		Daraus ergeben sich die Wahrscheinlichkeiten zu:
+		\begin{align*}
+			p_\Pi(H_1|D,I) &= \frac{0,8 \cdot 0,13}{0,304} \approx 0,3421 = \SI{34,21}{\percent}	\\
+			p_K(H_2|D,I) &= \frac{0,1 \cdot 1,5}{0,304} \approx 0,4934 = \SI{49,34}{\percent}	\\	
+			p_p(H_3|D,I) &= \frac{0,1 \cdot 0,5}{0,304} \approx 0,1645 = \SI{16,45}{\percent}
+		\end{align*}
+	
+	\item[b)]
+		Gegeben sind:
+		\begin{align*}
+			p_\Pi(D|H_1,I) &= 2,0	\\
+			p_K(D|H_2,I) &= 0,5	\\
+			p_p(D|H_3,I) &= 0,05
+		\end{align*}
+		Die Prior-Information ergibt sich zu:
+		\begin{align*}
+			p(D|I) &= 1,655
+		\end{align*}
+		Daraus ergeben sich die Wahrscheinlichkeiten zu:
+		\begin{align*}
+			p_\Pi(H_1|D,I) & = \SI{96,68}{\percent}	\\
+			p_K(H_2|D,I) & =  \SI{3,02}{\percent}	\\	
+			p_p(H_3|D,I) &=  \SI{0,30}{\percent}
+		\end{align*}
+	
+		
+	\item[c)]
+		Gegeben sind:
+		\begin{align*}
+			p_\Pi(D|H_1,I) &= 0,07	\\
+			p_K(D|H_2,I) &= 0,5	\\
+			p_p(D|H_3,I) &= 1,3
+		\end{align*}
+		Die Prior-Information ergibt sich zu:
+		\begin{align*}
+			p(D|I) &= 0,236
+		\end{align*}
+		Daraus ergeben sich die Wahrscheinlichkeiten zu:
+		\begin{align*}
+			p_\Pi(H_1|D,I) & = \SI{23,73}{\percent}	\\
+			p_K(H_2|D,I) & = \SI{21,19}{\percent}	\\	
+			p_p(H_3|D,I) &= \SI{55,08}{\percent}
+		\end{align*}
+	
+\end{itemize}
