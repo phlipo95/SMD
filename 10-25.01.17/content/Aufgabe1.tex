@@ -1,89 +1,26 @@
-\section*{Aufgabe 1}
+\section*{Aufgabe 1)}
+\subsection*{a)}
+Mit $s = 0$ ergibt sich für $b_0$:
+\begin{align*}
+	\frac{\partial}{\partial b_0} \ln[L(b_0,0)] &= \frac{N_\text{off}}{b_0} + \frac{N_\text{on}}{b_0} - (1+\alpha) = 0 \\
+	b_0 &= \frac{N_\text{off} + N_\text{on}}{1+\alpha}
+\end{align*}
 
-\renewcommand*\t[1]{\text{#1}}
-
-	Gegeben ist die Likelihoodfunktion
-	\begin{align*}
-		\ln[L(b,s)] &= -F(b,s)	\\
-			&= N_\t{off} \ln(b) + N_\t{on} \ln(s + \alpha b) - (1+\alpha)b - s - \ln(N_\t{off}!) - \ln(N_\t{on}!) 
-	\end{align*}
-	Die Werte $\hat{b}$ und $\hat{s}$ machen die Likelihood mit folgenden Werten maximal:
-	\begin{align*}
-		\hat{b} &= N_\t{off}	\\
-		\hat{s} &= N_\t{on} - \alpha N_\t{off}
-	\end{align*}
-	
-\begin{itemize}
-	\item[a)]
-	Mit $s=0$ egint sich die Funktion zu:
-	\begin{align*}
-		\ln[L(b,0)] &= N_\t{off} \ln(b) + N_\t{on} \ln(\alpha b) - (1+\alpha)b - \ln(N_\t{off}!) - \ln(N_\t{on}!)
-	\end{align*}
-	Für $b_0$ ergibt sich:
-	\begin{align*}
-		\left. \frac{\partial}{\partial b}\ln[L(b,0)]\right|_{b=b_0} &= \frac{N_\t{off}}{b_0} + \frac{N_\t{on}}{b_0} - (1+\alpha) \overset{!}{=} 0	\\
-			\Rightarrow \quad b_0 &= \frac{N_\t{off} + N_\t{on}}{1+\alpha}
-	\end{align*}
-	Der Fehler $\sigma_{b_0}^2$ berechnet sich zu:
-	\begin{align*}
-		\sigma_{b_0}^2 &= \left. \left(\frac{\partial [\ln(L)]^2}{\partial b^2}\right) \right|_{b=b_0} 	\\
-			&= -\frac{N_\t{off} + N_\t{on}}{b_0^2}	\\
-			&= -\frac{N_\t{off} + N_\t{on}}{\left(\frac{N_\t{off} + N_\t{on}}{1+\alpha}\right)^2}	\\
-			&= -\frac{(1+\alpha)^2}{N_\t{off}+N_\t{on}}
-	\end{align*}
-	Also ist der Fehler
-	\begin{align*}
-		\sigma_{b_0}^2 = -\frac{(1+\alpha)^2}{N_\t{off}+N_\t{on}} \qquad \t{bzw.} \qquad \sigma_{b_0}^2 = -\frac{1+\alpha}{b_0}\;.
-	\end{align*}
-	
-	\newpage
-	\item[b)]
-	Das Verhältnis der Likelihoods kann mit
-	\begin{align*}
-		\lambda	&= \frac{L_0}{\hat{L}} 
-	\end{align*}
-	berechnet werden, wobei $L_0 = L(b_0, s_0)$ und $\hat{L} = L(\hat{b}, \hat{s})$ ist. Es folgt weiter:
-	\begin{align*}
-		\lambda &= \frac{L_0}{\hat{L}} = e^{\ln\left(\frac{L_0}{\hat{L}}\right)} = e^{\ln(L_0) - \ln(\hat{L})}	\\
-			&= \exp[N_\t{off} \ln(b_0) + N_\t{on} \ln(\alpha b_0) - (1+\alpha)b_0 - \ln(N_\t{off}!) - \ln(N_\t{on}!)	\\
-				& \;\;-(N_\t{off} \ln(\hat{b}) + N_\t{on} \ln(\hat{s}+\alpha\hat{b}) - (1+\alpha)\hat{b} - \hat{s} - \ln(N_\t{off}!) - \ln(N_\t{on}!) )]	\\
-			&= e^{N_\t{off} \ln(b_0)}\; e^{N_\t{on} \ln(\alpha b_0)}\; e^{-(1+\alpha)b_0}\; e^{-N_\t{off} \ln{\hat{b}}}\; e^{-N_\t{on} \ln(\hat{s}+ \alpha\hat{b})}\; e^{(1+\alpha)\hat{b}}\; e^{\hat{s}}	\\
-			&= b_0^{N_\t{off}}\; b_0^{N_\t{on}}\; \alpha^{N_\t{on}}\; \hat{b}^{-N_\t{off}}\; (\hat{s}+\alpha\hat{b})^{-N_\t{on}}\; e^{-(1+\alpha)b_0}\; e^{(1+\alpha)\hat{b}} \; e^{\hat{s}}	\\
-			&= \frac{(N_\t{on}+N_\t{off})^{N_\t{on}+N_\t{off}}}{(1+\alpha)^{N_\t{off}+N_\t{on}}}\; \alpha^{N_\t{on}}\; N_\t{off}^{-N_\t{off}}\; N_\t{on}^{-N_\t{on}}\; e^{N_\t{off} + N_\t{on}}\; e^{(1+\alpha)N_\t{off}}\; e^{N_\t{on} - \alpha{N_\t{off}}}
-	\end{align*}
-	
-	\item[c)]
-		\begin{align*}
-			D &= -2\ln(\lambda)	\\
-				&= -4\ln\left( \frac{(N_\t{on}+N_\t{off})^{N_\t{on}+N_\t{off}}}{(1+\alpha)^{N_\t{off}+N_\t{on}}}\; \alpha^{N_\t{on}}\; N_\t{off}^{-N_\t{off}}\; N_\t{on}^{-N_\t{on}}\right) (N_\t{off} + N_\t{on})
-		\end{align*}
-		
-	\item[d)]
-		\begin{itemize}
-			\item[1)]
-				\begin{align*}
-					N_\t{on} &= 120	\\
-					N_\t{off} &= 160	\\
-					\alpha &= 0,6
-				\end{align*}
-				\begin{align*}
-					b_0 &= 175	\\
-					D &\approx -\num{1888,12}\;^\star
-				\end{align*}
-			\item[2)]
-				\begin{align*}
-					N_\t{on} &= 150	\\
-					N_\t{off} &= 320	\\
-					\alpha &= 0,3
-				\end{align*}
-				\begin{align*}
-					b_0 &\approx \num{361,5385}	\\
-					D &\approx -\num{18011,8}\;^\star
-				\end{align*}
-		\end{itemize}
-		$^\star$: Werte mit Wolfram-Alpha berechnet. Gleichungen wegen großen Exponenten sind merkwürding und nicht gut auszurechnen...
-\end{itemize}
+Der Fehler $\sigma_{b_0}^2$ wird über berechnet:
+\begin{align*}
+	\sigma_{b_0}^2 &= \frac{\partial^2 \ln(L)}{\partial b_0^2} = -\frac{N_\text{off} + N_\text{on}}{b_0^2}	\\
+	&= -\frac{N_\text{off} + N_\text{on}} {\left(\frac{N_\text{off} + N_\text{on}}{1+\alpha}\right)^2}	= -\frac{(1 + \alpha)^2}{N_\text{off} + N_\text{on}}
+\end{align*}
 
 
 
-
+\subsection*{b)}
+\begin{align*}
+	\lambda &= \frac{L_0}{\hat{L}} = e^{\ln\left(\frac{L_0}{\hat{L}}\right)} =
+	e^{\ln(L_0) - \ln(\hat{L})}	\\
+	&= \exp[N_\text{off} \ln(b_0) + N_\text{on} \ln(\alpha b_0) - (1+\alpha)b_0 - \ln(N_\text{off}!) - \ln(N_\text{on}!)	\\
+	& \;\;-(N_\text{off} \ln(\hat{b}) + N_\text{on} \ln(\hat{s}+\alpha\hat{b}) - (1+\alpha)\hat{b} - \hat{s} - \ln(N_\text{off}!) - \ln(N_\text{on}!) )]	\\
+	&= e^{N_\text{off} \ln(b_0)}\; e^{N_\text{on} \ln(\alpha b_0)}\; e^{-(1+\alpha)b_0}\; e^{-N_\text{off} \ln{\hat{b}}}\; e^{-N_\text{on} \ln(\hat{s}+ \alpha\hat{b})}\; e^{(1+\alpha)\hat{b}}\; e^{\hat{s}}	\\
+	&= b_0^{N_\text{off}}\; b_0^{N_\text{on}}\; \alpha^{N_\text{on}}\; \hat{b}^{-N_\text{off}}\; (\hat{s}+\alpha\hat{b})^{-N_\text{on}}\; e^{-(1+\alpha)b_0}\; e^{(1+\alpha)\hat{b}} \; e^{\hat{s}}	\\
+	&=\frac{(N_\text{on}+N_\text{off})^{N_\text{on}+N_\text{off}}}{(1+\alpha)^{N_\text{off}+N_\text{on}}}\; \alpha^{N_\text{on}}\; N_\text{off}^{-N_\text{off}}\; N_\text{on}^{-N_\text{on}}\; e^{N_\text{off} + N_\text{on}}\; e^{(1+\alpha)N_\text{off}}\; e^{N_\text{on} - \alpha{N_\text{off}}}
+\end{align*}
