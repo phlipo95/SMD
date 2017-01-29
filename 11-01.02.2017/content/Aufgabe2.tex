@@ -1,0 +1,109 @@
+\subsection*{a)}
+Die Antwortmatrix $A$ auf den Sachverhalt das bei dem Experiment 20 \% der Messung verloren geht hat die Form
+\begin{equation}
+  A = 0.8 \cdot  
+  \begin{pmatrix}
+    1 & 0 \\
+    0 & 1 \\
+  \end{pmatrix} \ .
+\end{equation}
+$\varepsilon$ ist die Wahrscheinlichkeit, dass das Ergebnis dem falschen Bin zugeordnet wird. Daraus ergibt sich die Antwortmatrix
+\begin{equation}
+  0.8 \cdot
+  \begin{pmatrix}
+    1 - \varepsilon & \varepsilon \\
+    \varepsilon & 1 - \varepsilon \\
+  \end{pmatrix}
+\end{equation}
+Anhand derer lässt sich aus den wahren Ereignisszahlen $f = (f_1, f_2)^T$ auf die gemessenen Ereigniszahlen $g = (g_1,g_2)^T$ schließen.
+\begin{equation}
+  g = A \cdot f \ 
+\end{equation}
+\subsection*{b)}
+Um aus den gemessenen Ereignisszahlen $g$ auf die muss die wahren $f$ zu schließen wird zunächst die Inverse der Antwortmatrix ($=B$) berechnet.
+\begin{equation}
+  B = \frac{0.8}{0.8^2 \cdot (1 - 2 \varepsilon)} 
+  \begin{pmatrix}
+    1 - \varepsilon & - \varepsilon \\
+    - \varepsilon & 1 - \varepsilon \\
+  \end{pmatrix}
+\end{equation}
+Aus ihr lässt sich die wahren Ereignisszahlen $f$ als Funktion von $\varepsilon$ und $f$ berechnen. 
+\begin{equation}
+  f = B * g
+\end{equation}
+Daraus lassen sich die Einträge von 
+\begin{equation}
+  f_1 = \frac{1}{0.8 - 1.6 \varepsilon} \left( (1 - \varepsilon) g_1 - \varepsilon g_2 \right)
+\end{equation}
+und 
+\begin{equation}
+  f_2 = \frac{1}{0.8 - 1.6 \varepsilon} \left( (1 - \varepsilon) g_2 - \varepsilon g_1 \right)
+\end{equation} 
+ablesen. 
+\subsection*{c)}
+Aus dem Vektor $g$ wird die Kovarianzmatrix berechnet indem die gemessenen Einträgte  der Intervalle auf die Hauptdiagonale geschrieben werden,
+\begin{equation}
+  V[g] =   
+  \begin{pmatrix}
+    g_1 & 0 \\
+    0 & g_2 \\
+  \end{pmatrix}
+\end{equation}
+und anschließend in die Basis von f transformiert 
+\begin{equation}
+  V[f] = B V[g] B^\text{T} = \frac{1}{(0.8 - 1.6 \varepsilon)^2}
+  \begin{pmatrix}
+    1 - \varepsilon & - \varepsilon \\
+    - \varepsilon & 1 - \varepsilon \\
+  \end{pmatrix}
+  \begin{pmatrix}
+    g_1 & 0 \\
+    0 & g_2 \\
+  \end{pmatrix}
+  \begin{pmatrix}
+    1 - \varepsilon & - \varepsilon \\
+    - \varepsilon & 1 - \varepsilon \\
+  \end{pmatrix}
+\end{equation}
+\begin{equation}
+  \Leftrightarrow \frac{1}{(0.8 - 1.6 \varepsilon)^2}
+  \begin{pmatrix}
+    (1 - \varepsilon)^2 g_1 - \varepsilon^2 g_2 & -\varepsilon(1-\varepsilon)(g_1 +g_2) \\
+    -\varepsilon(1-\varepsilon)(g_1 +g_2) & (1 - \varepsilon)^2 g_2 - \varepsilon^2 g_1  \\
+  \end{pmatrix}
+\end{equation}
+\subsection*{d)}
+Die Fehler der Messwerte werden aus der Wurzel der Diagonalelemente berechnet. Der Rest wird aus dem entsprechenden Pythoncode berechnet.
+\begin{equation}
+  f = \begin{pmatrix}
+    \num{254 +- 20}\\
+    \num{206 +- 18}\\
+    \end{pmatrix}
+\end{equation}
+Die Kovarianzmatrix ist :
+\begin{equation}
+  \begin{pmatrix}
+    399 & -81 \\
+    -81 & 339 \\
+  \end{pmatrix}
+\end{equation}
+
+\subsection*{e)}
+Die Fehler der wahren Ereignisszahlen werden aus der Wurzel der Diagonalelemente berechnet.
+\begin{equation}
+  f = \begin{pmatrix}
+    \num{262 +- 24}\\
+    \num{198 +- 22}\\
+    \end{pmatrix}
+\end{equation}
+Die Kovarianzmatrix ist :
+\begin{equation}
+  \begin{pmatrix}
+    584 & -256 \\
+    256 & 584 \\
+  \end{pmatrix}
+\end{equation}
+
+\subsection*{f)}
+Für $\varepsilon$ = 0.5 wird die Matrix singulär, sodass die Inverse Matrix nicht zu bestimmen ist.
