@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber build/main"] 1485730591 "build/main.bcf" "build/main.bbl" "build/main" 1485871231
-  "build/main.bcf" 1485871231 94332 bdcda53215b7f84e8f84b4a8dbe0f70a ""
+["biber build/main"] 1485893825 "build/main.bcf" "build/main.bbl" "build/main" 1485894698
+  "build/main.bcf" 1485894698 94332 bdcda53215b7f84e8f84b4a8dbe0f70a ""
   (generated)
   "build/main.blg"
   "build/main.bbl"
-["pdflatex"] 1485871227 "main.tex" "build/main.pdf" "main" 1485871231
+["pdflatex"] 1485894694 "main.tex" "build/main.pdf" "main" 1485894698
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
@@ -203,19 +203,21 @@
   "/home/maximilian/.local/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1477402030 829336 921695f12040c38884acc4c1d569de7f ""
   "/home/maximilian/.local/texlive/2016/texmf-var/tex/generic/config/language.dat.lua" 1477253161 17042 e4225684b0300226c5d2cb358eae145b ""
   "/home/maximilian/.local/texlive/2016/texmf-var/web2c/luatex/lualatex.fmt" 1477253176 1246192 60f1d464240d4bacad804d8689da690f ""
-  "build/main.aux" 1485871231 1487 f7112b25a7983da67199b7492040a5de ""
-  "build/main.bbl" 1485731174 0 d41d8cd98f00b204e9800998ecf8427e "biber build/main"
-  "build/main.run.xml" 1485871231 2223 4d266ac76becff7258924741fcd1121c ""
+  "Python/bar.pdf" 1485894672 5852 c9813e345890bb2a533f1d6aa2e42636 ""
+  "Python/gemesseneVerteilung.pdf" 1485894666 11088 e40fc29f9ef7676f3196740478a6becb ""
+  "build/main.aux" 1485894698 1762 6f3659c12a6adfd322155487341a1581 ""
+  "build/main.bbl" 1485893825 0 d41d8cd98f00b204e9800998ecf8427e "biber build/main"
+  "build/main.run.xml" 1485894698 2223 4d266ac76becff7258924741fcd1121c ""
   "content/Aufgabe1.tex" 1485731174 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "content/Aufgabe2.tex" 1485871216 3408 aa46cd23ee6f9fa232cc5aa7028162f3 ""
-  "content/Aufgabe3.tex" 1485731174 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "content/Aufgabe2.tex" 1485872725 3408 a098aeebc1471d1ec45e290d02d90a84 ""
+  "content/Aufgabe3.tex" 1485893702 1389 3631b5435285662290aa576311d13e5b ""
   "content/Aufgabe4.tex" 1485731174 0 d41d8cd98f00b204e9800998ecf8427e ""
   "header.tex" 1485731174 3202 1cfea0c932ab987380bf0572890642f5 ""
   "main.tex" 1485731174 521 b3728593d5fabf57c4bd6d453ede370e ""
   (generated)
+  "build/main.run.xml"
   "/home/maximilian/.local/texlive/2016/texmf-var/m_t_x_t_e_s_t.tmp"
   "build/main.bcf"
-  "build/main.pdf"
   "build/main.log"
   "build/main.aux"
-  "build/main.run.xml"
+  "build/main.pdf"

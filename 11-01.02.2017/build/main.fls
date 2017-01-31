@@ -390,6 +390,10 @@ INPUT /home/maximilian/.local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/
 INPUT /home/maximilian/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
 INPUT ./content/Aufgabe3.tex
 INPUT ./content/Aufgabe3.tex
+INPUT ./Python/gemesseneVerteilung.pdf
+INPUT ./Python/gemesseneVerteilung.pdf
+INPUT ./Python/bar.pdf
+INPUT ./Python/bar.pdf
 INPUT ./content/Aufgabe4.tex
 INPUT ./content/Aufgabe4.tex
 INPUT build/main.aux

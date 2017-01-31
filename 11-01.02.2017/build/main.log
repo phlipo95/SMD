@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.23)  31 JAN 2017 15:00
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.23)  31 JAN 2017 21:31
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -466,7 +466,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.105 seconds)
+luaotfload | main : initialization completed in 0.104 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX. (/home/maximilian/.local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
 \l_fontspec_script_int=\count117
@@ -2046,35 +2046,45 @@ LaTeX Font Info:    Font shape `EU2/LatinModernMath(2)/m/n' will be
 
 {/home/maximilian/.local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./content/Aufgabe1.tex) (./content/Aufgabe2.tex(load luc: /home/maximilian/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc)(load luc: /home/maximilian/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc) [2
 
-](load luc: /home/maximilian/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc)) (./content/Aufgabe3.tex) (./content/Aufgabe4.tex)
+](load luc: /home/maximilian/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc)) (./content/Aufgabe3.tex <./Python/gemesseneVerteilung.pdf, id=32, 578.16pt x 433.62pt>
+File: ./Python/gemesseneVerteilung.pdf Graphic file (type pdf)
+ <use ./Python/gemesseneVerteilung.pdf>
+Package luatex.def Info: ./Python/gemesseneVerteilung.pdf used on input line 7.
+(luatex.def)             Requested size: 418.25555pt x 313.68826pt.
+ [3] <./Python/bar.pdf, id=48, 578.16pt x 433.62pt>
+File: ./Python/bar.pdf Graphic file (type pdf)
+ <use ./Python/bar.pdf>
+Package luatex.def Info: ./Python/bar.pdf used on input line 19.
+(luatex.def)             Requested size: 418.25555pt x 313.68826pt.
+ [4<./Python/gemesseneVerteilung.pdf>]) (./content/Aufgabe4.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
- [3]
+ [5<./Python/bar.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
  (./build/main.aux
 Language ngerman already loaded; id is 8)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: F7112B25A7983DA67199B7492040A5DE;1487.
+(rerunfilecheck)             Checksum: 6F3659C12A6ADFD322155487341A1581;1762.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 44966 strings out of 495118
+ 45004 strings out of 495118
  100000,1648299 words of node,token memory allocated
- 2000 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 174 glue, 1 kern, 83 attribute, 58 glue_spec, 83 attribute_list, 1 write nodes
-   avail lists: 1:3,2:507,3:120,4:32,5:153,6:1032,7:507,8:109,9:225,10:2,11:98
- 47205 multiletter control sequences out of 65536+600000
- 101 fonts using 32651767 bytes
+ 2140 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 190 glue, 1 kern, 90 attribute, 58 glue_spec, 90 attribute_list, 1 write nodes
+   avail lists: 1:3,2:581,3:120,4:36,5:153,6:1254,7:581,8:109,9:237,10:5,11:138
+ 47227 multiletter control sequences out of 65536+600000
+ 102 fonts using 32783295 bytes
  71i,13n,104p,8833b,881s stack positions out of 5000i,500n,10000p,200000b,100000s
-</home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on main.pdf (3 pages, 28848 bytes).
+</home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/maximilian/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
+Output written on main.pdf (5 pages, 48404 bytes).
 
-PDF statistics: 86 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
- 24 named destinations out of 1000 (max. 131072)
+PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
