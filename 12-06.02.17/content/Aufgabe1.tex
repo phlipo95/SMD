@@ -1,0 +1,15 @@
+\section*{Aufgabe 1)}
+\subsection{a)}
+mode: test \\
+pseudo_data_fraction: 0.9 \\
+# Die Daten werden in zwei Teile aufgespalten. Die angegebene Zahl sagt aus, wie viel Prozent der Daten als Monte Carlo verwendet werden. Der Rest sind Pseudo-Daten. \\
+\\
+source_file_moca: NeutrinoMC.root \\
+roottree_moca: Signal_MC \\
+# Die detektierten Signalereignisse sind im Tree: Signal_MC gespeichert. \\
+\\
+branch_x: Energie log \\
+limits_x: 0 11 \\
+\\
+number_knots: 8 \\
+max_number_knots: 8 \\
